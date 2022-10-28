@@ -1,0 +1,22 @@
+{
+  "name": "hamilton-7-escapium-team-6",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "compile": "sass --watch ./resources/scss/style.scss ./resources/css/style.css"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/becodeorg/hamilton-7-escapium-team-6.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/becodeorg/hamilton-7-escapium-team-6/issues"
+  },
+  "homepage": "https://github.com/becodeorg/hamilton-7-escapium-team-6#readme",
+  "dependencies": {
+    "sass": "^1.55.0"
+  }
+}
