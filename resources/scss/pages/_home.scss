@@ -1,5 +1,6 @@
 @use '../utilities/variables' as *;
 @use '../layout/how-it-works' as *;
+@use '../layout/testimonials' as *;
 
 main {
 	display: flex;
@@ -160,6 +161,139 @@ main {
 
 				&:hover {
 					background-color: #d40d10;
+					transition: 0.33s;
+				}
+			}
+		}
+	}
+
+	.blog-posts {
+		display: flex;
+		flex-direction: column;
+		justify-content: space-between;
+		align-items: center;
+		font-family: $headings-font, sans-serif;
+		background-color: $darkBackground;
+
+		h2 {
+			color: $whiteBackground;
+			font-weight: 700;
+			font-size: 19px;
+			margin-bottom: 20px;
+		}
+
+		a {
+			color: $red;
+			font-size: 10px;
+			margin-bottom: 50px;
+			font-size: 12px;
+			font-family: $paragraphs-font, sans-serif;
+			text-decoration: none;
+			padding: 2.5px;
+			border-bottom: 1px solid $red;
+
+			&:hover {
+				color: $whiteBackground;
+				transition: 0.33s;
+				border-bottom-color: $whiteBackground;
+			}
+		}
+		
+		&__post {
+			display: flex;
+			flex-direction: column;
+			width: 95%;
+			margin-bottom: 30px;
+
+			p {
+				color: $globalFontColor;
+				font-size: 14px;
+				margin-bottom: 15px;
+				margin-left: 20px;
+				font-family: $paragraphs-font, sans-serif;
+			}
+
+			.one {
+				background-image:
+				linear-gradient(180deg, rgba(34,34,34,0) 0%, rgba(34,34,34,1) 100%),
+				url('./../images/gallery/room-9.jpg');
+				background-size: cover;
+			}
+
+			.two {
+				background-image:
+				linear-gradient(180deg, rgba(34,34,34,0) 0%, rgba(34,34,34,1) 100%),
+				url('./../images/gallery/room-7.jpg');
+				background-size: cover;
+			}
+
+			.three {
+				background-image:
+				linear-gradient(180deg, rgba(34,34,34,0) 0%, rgba(34,34,34,1) 100%),
+				url('./../images/gallery/post-img-2.jpg');
+				background-size: cover;
+			}
+
+			&__cont-img {
+				display: flex;
+				height: 300px;
+				position: relative;
+
+				&__profile {
+					position: absolute;
+					bottom: 20px;
+					left: 20px;
+					display: flex;
+					flex-direction: row;
+					align-items: center;
+
+					&__left {
+						display: flex;
+						flex-direction: column;
+						align-items: center;
+
+						p {
+							margin: auto;
+							margin-left: 10px;
+							color: $whiteBackground;
+						}
+					}
+
+					img {
+						border-radius: 100px;
+						border: 1px solid $whiteBackground;
+					}
+				}
+			}
+
+			.spaced-text {
+				color: $globalFontColor;
+				font-size: 10px;
+				margin-top: 30px;
+				margin-bottom: 10px;
+				margin-left: 20px;
+				font-size: 12px;
+				font-family: $paragraphs-font, sans-serif;
+				letter-spacing: 2.5px;
+			}
+
+			.gray-bar-left {
+				width: 40px;
+				height: 5px;
+				background-color: rgba(128, 128, 128, 0.445);
+				margin-bottom: 40px;
+				margin-left: 20px;
+			}
+
+			h3 {
+				color: $whiteBackground;
+				font-weight: 700;
+				margin-left: 20px;
+				margin-bottom: 30px;
+				font-size: 21px;
+
+				&:hover {
+					color: $red;
 					transition: 0.33s;
 				}
 			}
