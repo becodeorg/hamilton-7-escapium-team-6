@@ -2,22 +2,40 @@
 @forward '../base/reset';
 
 footer {
-    background-image: src('/resources/images/gallery/gallery-3.jpg');
-    background-color: $darkBackground;
+    z-index: 1;
+    &::before {
+        content: "";
+        background: url('../images/gallery/room-7.jpg');
+        background-repeat: no-repeat;
+        background-size:cover;
+        position: absolute;
+        opacity: 0.1;
+        top: 0;
+        bottom: 0;
+        right: 0;
+        left: 0;
+        z-index: 0;
+    }
+    background:  $darkBackground;
+    background-repeat: no-repeat;
+    background-size: cover;
     display: flex;
     flex-direction: column;
     color: $globalFontColor;
-    font-size: 32px;
     font-family: $paragraphs-font;
     .footer-category {
         font-family: $headings-font;
         font-weight: 700;
         color: white;
         margin: 1rem 0;
+        font-size: 3.5em;
     }
-    /* .footer-text, .li, a{
-        font-size: 16px;
-    } */
+    .footer-address {
+        margin: 2em 0;
+    }
+    .footer-text {
+        font-size: 2em;
+    }
     a {
         color: white;
         text-decoration: none;
@@ -28,6 +46,8 @@ footer {
     }
     section {
         margin-top: 2rem;
+        display: flex;
+        flex-direction: column;
         } 
         #footer-hours {
             &-container {
@@ -40,9 +60,9 @@ footer {
     }
     li {
         margin: 1.5rem 0;
-        font-size: 25px;
+        font-size: 2em;
         a {
-            font-size: 25px;
+            font-size: 2em;
         }
     }
     #footer-address, #footer-links, #footer-hours, #footer-social {
@@ -53,7 +73,7 @@ footer {
         padding: 1vw;
         border-radius: 50%;
         color: white;
-        font-size: 20px;
+        font-size: 2em;
         text-align: center;
     }
     #footer-bottom {
