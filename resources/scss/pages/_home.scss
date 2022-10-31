@@ -1,10 +1,9 @@
 @use '../utilities/variables' as *;
 
-body {
+main {
 	display: flex;
 	flex-direction: column;
 	background-color: $darkestBackground;
-	font-family: $headings-font, sans-serif;
 	overflow-x: hidden;
 }
 
@@ -16,13 +15,14 @@ body {
 		align-items: center;
 		background-image:
 			/*linear-gradient(150deg, rgba(0,0,0,0.3) 34%, rgba(0,0,0,0.7) 100%)*/
-			linear-gradient(0deg, rgba(34,34,34,0.3) 24%, rgba(27,27,27,0.7) 100%),
-			url('./../images/slide-4.jpeg');
+			linear-gradient(180deg, rgba(27,27,27,0.1) 0%, rgba(27,27,27,1) 100%),
+			url('./../images/gallery/slide-4.jpg');
 		background-position-x: 40%;
 		background-position-y: 100%;
 		background-size: cover;
 		height: 50vh;
 		position: relative;
+		font-family: $headings-font, sans-serif;
 
 		&__container {
 			display: flex;
@@ -34,7 +34,7 @@ body {
 			h1 {
 				font-weight: 700;
 				color: $whiteBackground;
-				font-size: 24px;
+				font-size: 32px;
 			}
 
 			a {
@@ -43,7 +43,7 @@ body {
 				margin: auto;
 				margin-top: 20px;
 				letter-spacing: 2.5px;
-				font-size: 14px;
+				font-size: 12px;
 			}
 	
 			a:hover {
@@ -66,11 +66,103 @@ body {
 		flex-direction: column;
 		justify-content: space-between;
 		align-items: center;
+		font-family: $headings-font, sans-serif;
 
 		h2 {
 			color: $whiteBackground;
 			font-weight: 700;
 			font-size: 20px;
+			margin-bottom: 50px;
+		}
+
+		&__container-card {
+			width: 90%;
+			margin-bottom: 30px;
+			background-color: $darkBackground;
+
+			img {
+				width: 100%;
+				height: 300px;
+			}
+
+			&__locks {
+				display: flex;
+				flex-direction: row;
+				justify-content: space-between;
+				margin-top: 20px;
+				margin-bottom: 30px;
+				width: 20%;
+				padding-left: 20px;
+
+				.colored {
+					color: $red;
+				}
+
+				li {
+					color:rgba(128, 128, 128, 0.445);
+				}
+			}
+
+			h3 {
+				color: $whiteBackground;
+				font-weight: 700;
+				padding-left: 20px;
+				font-size: 21px;
+
+				&:hover {
+					color: $red;
+					transition: 0.33s;
+				}
+			}
+
+			&__infos {
+				display: flex;
+				flex-direction: row;
+				justify-content: space-between;
+				align-items: center;
+				color: #c2c2c2;
+				margin-top: 15px;
+				margin-bottom: 20px;
+				padding-left: 20px;
+				width: 45%;
+
+				p {
+					color: $globalFontColor;
+					font-size: 10px;
+					font-weight: 700;
+				}
+			}
+
+			&__paragraph {
+				padding-left: 20px;
+				padding-right: 20px;
+				font-size: 12px;
+				line-height: 20px;
+				color: $globalFontColor;
+				margin-bottom: 30px;
+			}
+
+			&__button {
+				margin-left: 20px;
+				margin-bottom: 30px;
+				padding-top: 10px;
+				padding-bottom: 10px;
+				padding-left: 25px;
+				padding-right: 25px;
+				outline: none;
+				border-style: none;
+				border-radius: 20px;
+				font-size: 12px;
+				color: $whiteBackground;
+				background-color: $red;
+				font-family: $headings-font, sans-serif;
+				font-weight: 700;
+
+				&:hover {
+					background-color: #d40d10;
+					transition: 0.33s;
+				}
+			}
 		}
 	}
 }
