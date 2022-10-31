@@ -1,0 +1,102 @@
+@use '../utilities/variables' as *;
+@forward '../base/reset';
+
+header {
+    nav {
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        justify-content: space-between;
+        background-color: rgba(25, 25, 25, 0.4);
+        position: fixed;
+        top: 0;
+        width: 100%;
+        a {
+            text-decoration: none;
+            font-family: $headings-font;
+            &:visited {
+                color: $globalFontColor;
+            }
+            &:hover {
+                color: white;
+            }
+        }
+        .navbar-item--active {
+            color: white;
+            position: relative;
+            &::before {
+                position: absolute;
+                z-index: 0;
+                top: 10px;
+                content: "";
+                width: 50px;
+                height: 2.5px;
+                background-color: $red;
+                transform: rotate(-45deg);
+            }
+            &:hover::before {
+                position: absolute;
+                z-index: 0;
+                top: 10px;
+                content: "";
+                width: 50px;
+                height: 2.5px;
+                background-color: $red;
+                transform: rotate(-45deg);
+            }
+        }
+    }
+    ul li {
+        display: inline-block;
+        margin-left: 1em;
+        &:hover::before {
+            position: absolute;
+            z-index: 0;
+            top: 40px;
+            content: "";
+            width: 50px;
+            height: 2.5px;
+            background-color: $red;
+            transform: rotate(-45deg);
+        }
+    }
+    #navbar-left {
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+    }
+    #navbar-right {
+        a {
+            color: white;
+            &:hover {
+                color: $globalFontColor;
+            }
+            i {
+                font-size: 16px;
+                padding-right: 1em;
+            }
+        }
+        p {
+            color: $globalFontColor;
+        }
+        #book-now {
+            font-weight: 700;
+            padding: 1em 1.5em;
+            border-radius: 25px;
+            border: 1px solid $globalFontColor;
+            &:hover {
+                border-color: white;
+            }
+        }
+        #header-signin {
+            text-transform: uppercase;
+            font-size: 10px;
+        }
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        gap: 1em;
+        color: white;
+        padding-right: 2em;
+    }
+}
