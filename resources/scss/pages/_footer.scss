@@ -1,9 +1,9 @@
 @use '../utilities/variables' as *;
 @forward '../base/reset';
 
-footer {
+/* footer {
     z-index: 1;
-    &::before {
+    &::after {
         content: "";
         background: url('../images/gallery/room-7.jpg');
         background-repeat: no-repeat;
@@ -14,7 +14,7 @@ footer {
         bottom: 0;
         right: 0;
         left: 0;
-        z-index: 0;
+        z-index: -10;
     }
     background:  $darkBackground;
     background-repeat: no-repeat;
@@ -104,5 +104,133 @@ footer {
         justify-content: space-between;
         margin-left: -1.3rem;
     }
+} */
+
+footer {
+    z-index: 0;
+    color: $globalFontColor;
+    padding: 0 1em;
+    font-family: $paragraphs-font;
+    a {
+        color: white;
+        text-decoration: none;
+        &:visited {
+            color: white;
+        }
+    }
+    #footer-menu {
+        display: grid; 
+    }
+    .footer-numberContainer {
+        display: grid; 
+        grid-template-columns: 2rem 1fr;
+        align-items: center;
+        margin-top: 2em;
+        font-size: 10px;
+        .footer-line {
+            height: 1px; 
+            background-color: $red;
+            width: 30px;
+        }
+    }
+    .footer-address, .footer-contact, .footer-links, #footer-hours-container, .footer-socials {
+        margin-left: 2em;
+    }
+    .footer-category {
+        font-family: $headings-font;
+        color: white;
+        font-weight: 700;
+        margin: 2em 2em;
+    }
+    .footer-address {
+        margin-bottom: 1em;
+    }
+    .footer-links {
+        li {
+            margin: 1.5em 0;
+        }
+        a {
+            color: $globalFontColor;
+            text-transform: uppercase;
+            &:hover {
+                color: white;
+            }
+        }
+    }
+    #footer-hours-container {
+        display: grid; 
+        grid-template-columns: 7rem 1fr;
+        li {
+            margin-top: 1em;
+        }
+    }
+    .footer-socials {
+        ul li {
+            display: inline-block;
+        }
+        i {
+            display: inline-block;
+            font-size: 18px;
+            line-height: 30px;
+            width: 30px;
+            height: 30px;
+            border-radius: 36px;
+            background-color: $darkestBackground;
+            color: white;
+            margin: 0 3px 3px 0;
+            text-align: center;
+        &:hover {
+            color: $darkestBackground;
+            background-color: white;
+            cursor: pointer;
+        }
+        }
+    }
+    hr {
+        margin: 1em 0;
+    }
+    #footer-bottom {
+        display: flex;
+        flex-direction: column;
+        gap: 1em;
+        align-items: center;
+        justify-content: center;
+        text-align: center;
+    }
+    &::after {
+        content: "";
+        background: url('../images/gallery/room-7.jpg');
+        background-repeat: repeat-y;
+        background-size:cover;
+        position: absolute;
+        top: 0;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        opacity: 0.1;
+        z-index: -1;
+    }
 }
 
+@media screen and (min-width: 1px) and (max-width: 767px) {
+    #footer-menu {
+        grid-template-columns: 1fr;
+    }
+    footer::after {
+        height: 200vh;
+    }
+}
+
+@media screen and (min-width: 768px) and (max-width: 1023px) {
+    #footer-menu {
+        grid-template-columns: 1fr 1fr 1fr 1fr;
+        gap: 1em;
+    }
+}
+
+
+@media screen and (min-width: 1024px){
+    #footer-menu {
+        grid-template-columns: 1fr 1fr 1fr 1fr;
+    }
+}
