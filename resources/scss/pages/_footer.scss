@@ -1,0 +1,88 @@
+@use '../utilities/variables' as *;
+@forward '../base/reset';
+
+footer {
+    background-image: src('/resources/images/gallery/gallery-3.jpg');
+    background-color: $darkBackground;
+    display: flex;
+    flex-direction: column;
+    color: $globalFontColor;
+    font-size: 32px;
+    font-family: $paragraphs-font;
+    .footer-category {
+        font-family: $headings-font;
+        font-weight: 700;
+        color: white;
+        margin: 1rem 0;
+    }
+    /* .footer-text, .li, a{
+        font-size: 16px;
+    } */
+    a {
+        color: white;
+        text-decoration: none;
+    }
+    .footer-link {
+        text-transform: uppercase;
+        color: $globalFontColor;
+    }
+    section {
+        margin-top: 2rem;
+        } 
+        #footer-hours {
+            &-container {
+            display: flex;
+            flex-direction: row;
+            .footer-hours {
+                margin-left: 2rem;
+            }
+        }
+    }
+    li {
+        margin: 1.5rem 0;
+        font-size: 25px;
+        a {
+            font-size: 25px;
+        }
+    }
+    #footer-address, #footer-links, #footer-hours, #footer-social {
+        margin-left: 2rem;
+    }
+    i {
+        background-color: $darkBackground;
+        padding: 1vw;
+        border-radius: 50%;
+        color: white;
+        font-size: 20px;
+        text-align: center;
+    }
+    #footer-bottom {
+        background-color: $darkestBackground;
+        display: flex;
+        flex-direction: column;
+        height: 20rem;
+        justify-content: center;
+        align-items: center;
+        color: $globalFontColor;
+        img {
+            margin-bottom: 2rem;
+            width: 25vw;
+        }
+    }
+
+    .footer-line {
+        width: 100%;
+        height: 0.1rem;
+        background-color: $red;
+        margin-left: 15px;
+    }
+    .footer-numberContainer {
+        width: 15%;
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        justify-content: space-between;
+        margin-left: -1.3rem;
+    }
+}
+

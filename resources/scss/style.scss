@@ -1,3 +1,8 @@
-@use 'utilities/variables' as *;
-@use 'base/reset';
-@use 'pages/home';
+@forward 'pages/about';
+@forward 'pages/blogs';
+@forward 'pages/contact';
+@forward 'pages/home';
+@forward 'pages/rooms';
+@forward 'pages/singleBlog';
+@forward 'pages/singleRoom';
+@forward 'pages/footer';
