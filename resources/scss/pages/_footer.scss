@@ -6,19 +6,8 @@ footer {
     color: $globalFontColor;
     padding: 0 1em;
     font-family: $paragraphs-font;
-    background: /* url('../images/gallery/room-7.jpg'),  */$darkBackground;
+    background: $darkBackground;
     position: relative;
-    #footer-bg {
-        opacity: 0.1;
-        width: 200%;
-        height: 100%;
-        position: absolute;
-        top: 0;
-        bottom: 0;
-        left: 0;
-        right: 0;
-        z-index: 10;
-    }
     a {
         color: white;
         text-decoration: none;
@@ -116,7 +105,7 @@ footer {
     }
     &::after {
         content: "";
-        background: url('../images/gallery/room-7.jpg');
+        background: url('../images/gallery/room-7.jpg') no-repeat fixed;
         background-size:210vh 100%;
         position: absolute;
         top: 0;

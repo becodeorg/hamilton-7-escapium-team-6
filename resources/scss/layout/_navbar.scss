@@ -1,6 +1,100 @@
 @use '../utilities/variables' as *;
 @forward '../base/reset';
 
+@media screen and (max-width: 767px) {
+    header {
+        nav { 
+            display: flex;
+            height: 80px;
+            flex-direction: row; 
+            align-items: center;
+            justify-content: space-between;
+            background-color: rgba(25, 25, 25, 0.4);
+            position: fixed;
+            top: 0;
+            width: 100%;
+            a {
+                text-decoration: none;
+                font-family: $headings-font;
+                color: white;
+                &:visited {
+                    color: white;
+                }
+                &:hover {
+                    color: $globalFontColor;
+                }
+            }
+            #navbar-menu {
+                display: none;
+            }
+            #navbar-right__desktop {
+                display: none;
+            }
+            #navbar-right__mobile {
+                display: flex;
+                align-items: center;
+                position: relative;
+                #checkbox-burger {
+                    position: absolute;
+                    display: flex;
+                    height: 32px;
+                    width: 33px;
+                    top: -20px;
+                    right: 16px;
+                    z-index: 5;
+                    opacity: 0;
+                    cursor: pointer;
+                    &:checked {
+                        ul {
+                            display: block;
+                        }
+                    }
+                }
+            
+                #burger--button {
+                    display: block;
+                    height: 26px;
+                    width: 32px;
+                    position: absolute;
+                    top: -15px;
+                    right: 20px;
+                    z-index: 2;
+                    display: flex;
+                    flex-direction: column;
+                    justify-content: space-between;
+                }
+            
+                .lines {
+                    display: block;
+                    height: 4px;
+                    width: 100%;
+                    border-radius: 10px;
+                    background: white;
+                }
+            
+                #line1 {
+                    transform-origin: 0% 0%;
+                    transition: transform 0.4s ease-in-out;
+                }
+            
+                #line2 {
+                    transition: transform 0.2s ease-in-out;
+                }
+            
+                #line3 {
+                    transform-origin: 0% 100%;
+                    transition: transform 0.4s ease-in-out;
+                }
+            }
+        }
+    }
+}
+/*Tablet*/
+@media screen and (min-width: 768px) and (max-width: 1279px) {
+
+}
+/*Computer*/
+@media screen and (min-width: 1280px){
 header {
     nav {
         display: flex;
@@ -14,8 +108,9 @@ header {
         a {
             text-decoration: none;
             font-family: $headings-font;
+            color: white;
             &:visited {
-                color: $globalFontColor;
+                color: white;
             }
             &:hover {
                 color: white;
@@ -65,7 +160,10 @@ header {
         flex-direction: row;
         align-items: center;
     }
-    #navbar-right {
+    #navbar-right__mobile {
+        display: none;
+    }
+    #navbar-right__desktop {
         a {
             color: white;
             &:hover {
@@ -99,4 +197,5 @@ header {
         color: white;
         padding-right: 2em;
     }
+}
 }
