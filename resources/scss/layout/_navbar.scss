@@ -1,7 +1,7 @@
 @use '../utilities/variables' as *;
 @forward '../base/reset';
 
-@media screen and (max-width: 767px) {
+@media screen and (max-width: 1279px) {
     header {
         nav { 
             display: flex;
@@ -25,7 +25,7 @@
                 }
             }
             #navbar-menu {
-                display: flex;
+                display: none;
                 flex-direction: column;
                 gap: 1em;
                 background-color: $darkBackground;  
@@ -50,22 +50,16 @@
             #navbar-right__mobile {
                 display: flex;
                 align-items: center;
-                position: relative;
                 #checkbox-burger {
                     position: absolute;
                     display: flex;
                     height: 32px;
                     width: 33px;
-                    top: -365px;
+                    top: 30px;
                     right: 16px;
                     z-index: 5;
                     opacity: 0;
                     cursor: pointer;
-                    &:checked {
-                        ul {
-                            display: block;
-                        }
-                    }
                 }
             
                 #burger--button {
@@ -73,7 +67,7 @@
                     height: 26px;
                     width: 32px;
                     position: absolute;
-                    top: -365px;
+                    top: 25px;
                     right: 20px;
                     z-index: 2;
                     display: flex;
@@ -107,9 +101,9 @@
     }
 }
 /*Tablet*/
-@media screen and (min-width: 768px) and (max-width: 1279px) {
+/* @media screen and (min-width: 768px) and (max-width: 1279px) {
 
-}
+} */
 /*Computer*/
 @media screen and (min-width: 1280px){
 header {

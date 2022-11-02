@@ -11,8 +11,6 @@ function checkboxBurger() {
         line3.style.transform = "rotate(-45deg)"
         menu.style.transform = "scaleY(1)"
         menu.style.display = "flex"
-        button.style.top = "-341px"
-        checkbox.style.top = "-336px"
         document.getElementById('navbar-logo').style.display = "none"
         document.querySelector('nav').style.backgroundColor = "rgba(25, 25, 25, 0.8)"
     }
@@ -22,8 +20,6 @@ function checkboxBurger() {
         line3.style.transform = "rotate(0deg)"
         menu.style.transform = "scaleY(0)"
         menu.style.display = "none"
-        button.style.top = "-15px"
-        checkbox.style.top = "-20px"
         document.getElementById('navbar-logo').style.display = "block"
         document.querySelector('nav').style.backgroundColor = "rgba(25, 25, 25, 0.4)"
     }
