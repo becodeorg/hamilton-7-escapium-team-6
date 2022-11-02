@@ -1,0 +1,20 @@
+@use '../utilities/variables' as *;
+@forward '../base/reset';
+
+main {
+ background-color: $darkBackground;
+ color: $globalFontColor;
+}
+
+h1 {
+    color: white;
+}
+
+
+@media screen and (max-width: 411px) {
+
+}
+img {
+    width: 100%;
+    height: 300px;
+}
