@@ -10,6 +10,472 @@ main {
 	overflow-x: hidden;
 }
 
+@media screen and (min-width: 1280px) {
+	.hero {
+		display: flex;
+		flex-direction: row;
+		background-image:
+			linear-gradient(180deg, rgba(27,27,27,0.1) 0%, rgba(27,27,27,1) 100%),
+			url('./../images/gallery/slide-4.jpg');
+		background-position-x: 30%;
+		background-position-y: 100%;
+		background-size: cover;
+		height: 100vh;
+		font-family: $headings-font, sans-serif;
+
+		&__container {
+			display: flex;
+			flex-direction: column;
+			justify-content: space-between;
+			text-align: left;
+			margin-top: 100px;
+			margin-left: 50px;
+			height: 30vh;
+
+			h1 {
+				font-weight: 700;
+				color: $whiteBackground;
+				font-size: 100px;
+				text-align: left;
+			}
+
+			.our-rooms-cont {
+				display: flex;
+				flex-direction: row;
+				align-items: center;
+				margin-top: -50px;
+				width: 250px;
+
+				.bar {
+					display: block;
+					width: 70px;
+					height: 2px;
+					background-color: $whiteBackground;
+				}
+
+				a {
+					color: $whiteBackground;
+					text-decoration: none;
+					margin: auto;
+					letter-spacing: 2.5px;
+					font-size: 12px;
+				}
+
+				a:hover {
+					color: $red;
+				}
+			}
+		}
+	}
+
+	.gray-bar {
+		width: 40px;
+		height: 5px;
+		background-color: rgba(128, 128, 128, 0.445);
+		margin: auto;
+		margin-top: 20px;
+		margin-bottom: 40px;
+	}
+
+	.features-rooms {
+		display: flex;
+		flex-direction: column;
+		justify-content: space-between;
+		align-items: center;
+		font-family: $headings-font, sans-serif;
+
+		h2 {
+			color: $whiteBackground;
+			font-weight: 700;
+			font-size: 19px;
+			margin-bottom: 50px;
+		}
+
+		&__container-card {
+			width: 80%;
+			margin-bottom: 50px;
+			background-color: $darkBackground;
+
+			img {
+				width: 100%;
+				height: 300px;
+			}
+
+			&__locks {
+				display: flex;
+				flex-direction: row;
+				justify-content: space-between;
+				margin-top: 20px;
+				margin-bottom: 30px;
+				width: 15%;
+				padding-left: 20px;
+
+				.colored {
+					color: $red;
+				}
+
+				li {
+					color:rgba(128, 128, 128, 0.445);
+				}
+			}
+
+			h3 {
+				color: $whiteBackground;
+				font-weight: 700;
+				padding-left: 20px;
+				font-size: 21px;
+
+				&:hover {
+					color: $red;
+					transition: 0.33s;
+				}
+			}
+
+			&__infos {
+				display: flex;
+				flex-direction: row;
+				justify-content: space-between;
+				align-items: center;
+				color: #c2c2c2;
+				margin-top: 15px;
+				margin-bottom: 20px;
+				padding-left: 20px;
+				width: 30%;
+
+				p {
+					color: $globalFontColor;
+					font-size: 10px;
+					font-weight: 700;
+				}
+			}
+
+			&__paragraph {
+				padding-left: 20px;
+				padding-right: 20px;
+				font-size: 12px;
+				line-height: 20px;
+				color: $globalFontColor;
+				margin-bottom: 30px;
+			}
+
+			&__button {
+				margin-left: 20px;
+				margin-bottom: 30px;
+				padding-top: 10px;
+				padding-bottom: 10px;
+				padding-left: 25px;
+				padding-right: 25px;
+				outline: none;
+				border-style: none;
+				border-radius: 20px;
+				font-size: 12px;
+				color: $whiteBackground;
+				background-color: $red;
+				font-family: $headings-font, sans-serif;
+				font-weight: 700;
+
+				&:hover {
+					background-color: #d40d10;
+					transition: 0.33s;
+				}
+			}
+		}
+	}
+
+	.blog-posts {
+		display: flex;
+		flex-direction: column;
+		justify-content: space-between;
+		align-items: center;
+		font-family: $headings-font, sans-serif;
+		background-color: $darkBackground;
+
+		h2 {
+			color: $whiteBackground;
+			font-weight: 700;
+			font-size: 19px;
+			margin-bottom: 20px;
+		}
+
+		a {
+			color: $red;
+			font-size: 10px;
+			margin-bottom: 50px;
+			font-size: 12px;
+			font-family: $paragraphs-font, sans-serif;
+			text-decoration: none;
+			padding: 2.5px;
+			border-bottom: 1px solid $red;
+
+			&:hover {
+				color: $whiteBackground;
+				transition: 0.33s;
+				border-bottom-color: $whiteBackground;
+			}
+		}
+
+		.blogs-container {
+			display: flex;
+			flex-direction: row;
+			flex-wrap: wrap;
+			justify-content: space-between;
+			width: 95%;
+		}
+		
+		&__post {
+			display: flex;
+			flex-direction: column;
+			width: 45%;
+			margin-bottom: 30px;
+
+			p {
+				color: $globalFontColor;
+				font-size: 14px;
+				margin-bottom: 15px;
+				margin-left: 20px;
+				font-family: $paragraphs-font, sans-serif;
+			}
+
+			.one {
+				background-image:
+				linear-gradient(180deg, rgba(34,34,34,0) 0%, rgba(34,34,34,1) 100%),
+				url('./../images/gallery/room-9.jpg');
+				background-size: cover;
+			}
+
+			.two {
+				background-image:
+				linear-gradient(180deg, rgba(34,34,34,0) 0%, rgba(34,34,34,1) 100%),
+				url('./../images/gallery/room-7.jpg');
+				background-size: cover;
+			}
+
+			.three {
+				background-image:
+				linear-gradient(180deg, rgba(34,34,34,0) 0%, rgba(34,34,34,1) 100%),
+				url('./../images/gallery/post-img-2.jpg');
+				background-size: cover;
+			}
+
+			&__cont-img {
+				display: flex;
+				height: 200px;
+				position: relative;
+
+				&__profile {
+					position: absolute;
+					bottom: 20px;
+					left: 20px;
+					display: flex;
+					flex-direction: row;
+					align-items: center;
+
+					&__left {
+						display: flex;
+						flex-direction: column;
+						align-items: center;
+
+						p {
+							margin: auto;
+							margin-left: 10px;
+							color: $whiteBackground;
+						}
+					}
+
+					img {
+						border-radius: 100px;
+						border: 1px solid $whiteBackground;
+					}
+				}
+			}
+
+			.spaced-text {
+				color: $globalFontColor;
+				font-size: 10px;
+				margin-top: 30px;
+				margin-bottom: 10px;
+				margin-left: 20px;
+				font-size: 12px;
+				font-family: $paragraphs-font, sans-serif;
+				letter-spacing: 2.5px;
+			}
+
+			.gray-bar-left {
+				width: 40px;
+				height: 5px;
+				background-color: rgba(128, 128, 128, 0.445);
+				margin-bottom: 40px;
+				margin-left: 20px;
+			}
+
+			h3 {
+				color: $whiteBackground;
+				font-weight: 700;
+				margin-left: 20px;
+				margin-bottom: 30px;
+				font-size: 21px;
+
+				&:hover {
+					color: $red;
+					transition: 0.33s;
+				}
+			}
+		}
+	}
+
+	.who-play {
+		display: flex;
+		flex-direction: column;
+		background-image: url("./../images/gallery/room-7.jpg");
+		background-size: cover;
+		background-position-x: 300px;
+		background-position-y: 50%;
+
+		&__texts {
+			display: flex;
+			flex-direction: row;
+			align-items: center;
+			padding: 25px;
+			background: linear-gradient(90deg, rgba(34,34,34,1) 0%, rgba(34,34,34,0.8) 100%);
+
+			p {
+				display: flex;
+				flex-direction: row;
+				color: $whiteBackground;
+				font-family: $headings-font, sans-serif;
+				font-weight: 700;
+				margin-left: 20px;
+			}
+
+			span {
+				color: $red;
+				font-size: 40px;
+				margin-left: 50px;
+			}
+		}
+	}
+
+	.instagram-shots {
+		display: flex;
+		flex-direction: column;
+		justify-content: space-between;
+		align-items: center;
+		font-family: $headings-font, sans-serif;
+
+		h2 {
+			color: $whiteBackground;
+			font-weight: 700;
+			font-size: 19px;
+			margin-bottom: 20px;
+		}
+
+		.escapium-click {
+			color: $red;
+			font-size: 10px;
+			margin-bottom: 50px;
+			font-size: 12px;
+			font-family: $paragraphs-font, sans-serif;
+			text-decoration: none;
+			padding: 2.5px;
+			border-bottom: 1px solid $red;
+
+			&:hover {
+				color: $whiteBackground;
+				transition: 0.33s;
+				border-bottom-color: $whiteBackground;
+			}
+		}
+
+		&__grid-container {
+			display: grid;
+			justify-content: center;
+			align-items: center;
+			grid-template-columns: 1fr 1fr;
+			gap: 8px;
+			margin: auto;
+
+			img {
+				margin: auto;
+				width: 380px;
+				height: 380px;
+			}
+		}
+
+		.btn-instagram {
+			display: flex;
+			flex-direction: row;
+			justify-content: space-between;
+			margin: 30px 0px 30px 0px;
+			padding: 12px;
+			border: 1.5px solid rgba(128, 128, 128, 0.445);
+			border-radius: 20px;
+			color: $whiteBackground;
+			font-weight: 700;
+			text-decoration: none;
+			width: 175px;
+
+			&:hover {
+				background-color: rgba(255, 255, 255, 0.336);
+				transition: 0.33s;
+			}
+		}
+
+		p {
+			font-size: 10px;
+			margin: auto;
+		}
+
+		i {
+			margin: auto;
+		}
+	}
+
+	.book-section {
+		display: flex;
+		flex-direction: column;
+		align-items: center;
+		background-color: $whiteBackground;
+
+		h2 {
+			color: $darkBackground;
+			font-family: $headings-font, sans-serif;
+			font-weight: 700;
+			font-size: 19px;
+			margin-bottom: 20px;	
+		}
+
+		p {
+			color: $globalFontColor;
+			font-size: 14px;
+			margin-bottom: 15px;
+			font-family: $paragraphs-font, sans-serif;
+		}
+
+		a {
+			display: flex;
+			justify-content: center;
+			align-items: center;
+			margin-top: 30px;
+			margin-bottom: 20px;
+			color: white;
+			background-color: $red;
+			text-decoration: none;
+			font-family: $headings-font, sans-serif;
+			font-weight: 700;
+			padding: 12px;
+			font-size: 11px;
+			width: 150px;
+			height: 20px;
+			border-radius: 20px;
+
+			&:hover {
+				background-color: #d40d10;
+				transition: 0.33s;
+			}
+		}
+	}
+}
+
 @media screen and (min-width: 768px) and (max-width: 1279px) {
 	.hero {
 		display: flex;
@@ -92,7 +558,7 @@ main {
 		}
 
 		&__container-card {
-			width: 90%;
+			width: 80%;
 			margin-bottom: 50px;
 			background-color: $darkBackground;
 
@@ -107,7 +573,7 @@ main {
 				justify-content: space-between;
 				margin-top: 20px;
 				margin-bottom: 30px;
-				width: 25%;
+				width: 15%;
 				padding-left: 20px;
 
 				.colored {
@@ -140,7 +606,7 @@ main {
 				margin-top: 15px;
 				margin-bottom: 20px;
 				padding-left: 20px;
-				width: 45%;
+				width: 30%;
 
 				p {
 					color: $globalFontColor;
@@ -213,11 +679,19 @@ main {
 				border-bottom-color: $whiteBackground;
 			}
 		}
+
+		.blogs-container {
+			display: flex;
+			flex-direction: row;
+			flex-wrap: wrap;
+			justify-content: space-between;
+			width: 95%;
+		}
 		
 		&__post {
 			display: flex;
 			flex-direction: column;
-			width: 95%;
+			width: 45%;
 			margin-bottom: 30px;
 
 			p {
@@ -251,7 +725,7 @@ main {
 
 			&__cont-img {
 				display: flex;
-				height: 300px;
+				height: 200px;
 				position: relative;
 
 				&__profile {
@@ -311,6 +785,158 @@ main {
 					color: $red;
 					transition: 0.33s;
 				}
+			}
+		}
+	}
+
+	.who-play {
+		display: flex;
+		flex-direction: column;
+		background-image: url("./../images/gallery/room-7.jpg");
+		background-size: cover;
+		background-position-x: 300px;
+		background-position-y: 50%;
+
+		&__texts {
+			display: flex;
+			flex-direction: row;
+			align-items: center;
+			padding: 25px;
+			background: linear-gradient(90deg, rgba(34,34,34,1) 0%, rgba(34,34,34,0.8) 100%);
+
+			p {
+				display: flex;
+				flex-direction: row;
+				color: $whiteBackground;
+				font-family: $headings-font, sans-serif;
+				font-weight: 700;
+				margin-left: 20px;
+			}
+
+			span {
+				color: $red;
+				font-size: 40px;
+				margin-left: 50px;
+			}
+		}
+	}
+
+	.instagram-shots {
+		display: flex;
+		flex-direction: column;
+		justify-content: space-between;
+		align-items: center;
+		font-family: $headings-font, sans-serif;
+
+		h2 {
+			color: $whiteBackground;
+			font-weight: 700;
+			font-size: 19px;
+			margin-bottom: 20px;
+		}
+
+		.escapium-click {
+			color: $red;
+			font-size: 10px;
+			margin-bottom: 50px;
+			font-size: 12px;
+			font-family: $paragraphs-font, sans-serif;
+			text-decoration: none;
+			padding: 2.5px;
+			border-bottom: 1px solid $red;
+
+			&:hover {
+				color: $whiteBackground;
+				transition: 0.33s;
+				border-bottom-color: $whiteBackground;
+			}
+		}
+
+		&__grid-container {
+			display: grid;
+			justify-content: center;
+			align-items: center;
+			grid-template-columns: 1fr 1fr;
+			gap: 8px;
+			margin: auto;
+
+			img {
+				margin: auto;
+				width: 380px;
+				height: 380px;
+			}
+		}
+
+		.btn-instagram {
+			display: flex;
+			flex-direction: row;
+			justify-content: space-between;
+			margin: 30px 0px 30px 0px;
+			padding: 12px;
+			border: 1.5px solid rgba(128, 128, 128, 0.445);
+			border-radius: 20px;
+			color: $whiteBackground;
+			font-weight: 700;
+			text-decoration: none;
+			width: 175px;
+
+			&:hover {
+				background-color: rgba(255, 255, 255, 0.336);
+				transition: 0.33s;
+			}
+		}
+
+		p {
+			font-size: 10px;
+			margin: auto;
+		}
+
+		i {
+			margin: auto;
+		}
+	}
+
+	.book-section {
+		display: flex;
+		flex-direction: column;
+		align-items: center;
+		background-color: $whiteBackground;
+
+		h2 {
+			color: $darkBackground;
+			font-family: $headings-font, sans-serif;
+			font-weight: 700;
+			font-size: 19px;
+			margin-bottom: 20px;	
+		}
+
+		p {
+			color: $globalFontColor;
+			font-size: 14px;
+			margin-bottom: 15px;
+			font-family: $paragraphs-font, sans-serif;
+		}
+
+		a {
+			display: flex;
+			justify-content: center;
+			align-items: center;
+			margin-top: 30px;
+			margin-bottom: 20px;
+			color: white;
+			background-color: $red;
+			text-decoration: none;
+			font-family: $headings-font, sans-serif;
+			font-weight: 700;
+			padding: 12px;
+			font-size: 11px;
+			width: 150px;
+			height: 20px;
+			border-radius: 20px;
+
+			&:hover {
+				background-color: #d40d10;
+				transition: 0.33s;
 			}
 		}
 	}
@@ -511,11 +1137,14 @@ main {
 				border-bottom-color: $whiteBackground;
 			}
 		}
+
+		.blogs-container {
+			width: 95%;
+		}
 		
 		&__post {
 			display: flex;
 			flex-direction: column;
-			width: 95%;
 			margin-bottom: 30px;
 
 			p {

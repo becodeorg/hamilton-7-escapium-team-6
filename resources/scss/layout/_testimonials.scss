@@ -1,35 +1,111 @@
 @use '../utilities/variables' as *;
 
-.testimonials {
-	display: flex;
-	flex-direction: column;
-	justify-content: center;
-	align-items: center;
-	background-color: $whiteBackground;
 
-	h2 {
-		color: $darkestBackground;
-		font-weight: 700;
-		font-size: 19px;
-		margin-bottom: 50px;
-		font-family: $headings-font, sans-serif;
+@media screen and (min-width: 768px) and (max-width: 1279px) {
+	.testimonials {
+		display: flex;
+		flex-direction: column;
+		justify-content: center;
+		align-items: center;
+		background-color: $whiteBackground;
+
+		h2 {
+			color: $darkestBackground;
+			font-weight: 700;
+			font-size: 19px;
+			margin-bottom: 50px;
+			font-family: $headings-font, sans-serif;
+		}
+
+		.testimonials-comments {
+			display: flex;
+			flex-direction: row;
+
+			.testimonials-comment {
+				display: flex;
+				flex-direction: column;
+				justify-content: center;
+				align-items: center;
+
+				q {
+					font-family: $paragraphs-font, sans-serif;
+					color: $globalFontColor;
+					font-size: 14px;
+					margin-bottom: 50px;
+					width: 80%;
+					text-align: center;
+					line-height: 20px;
+				}
+		
+				p {
+					font-family: $paragraphs-font, sans-serif;
+					color: $globalFontColor;
+					font-size: 14px;
+					font-weight: 700;
+					margin: 20px 0px 40px 0px;
+				}
+			}
+		}
+
+		.arrows {
+			display: flex;
+			justify-content: space-between;
+			width: 20%;
+			margin-bottom: 50px;
+		}
 	}
+}
 
-	q {
-		font-family: $paragraphs-font, sans-serif;
-		color: $globalFontColor;
-		font-size: 14px;
-		margin-bottom: 50px;
-		width: 80%;
-		text-align: center;
-		line-height: 20px;
-	}
+@media screen and (max-width: 767px) {
+	.testimonials {
+		display: flex;
+		flex-direction: column;
+		justify-content: center;
+		align-items: center;
+		background-color: $whiteBackground;
 
-	p {
-		font-family: $paragraphs-font, sans-serif;
-		color: $globalFontColor;
-		font-size: 14px;
-		font-weight: 700;
-		margin: 20px 0px 40px 0px;
+		h2 {
+			color: $darkestBackground;
+			font-weight: 700;
+			font-size: 19px;
+			margin-bottom: 50px;
+			font-family: $headings-font, sans-serif;
+		}
+
+		.testimonials-comments {
+
+			.testimonials-comment {
+				display: flex;
+				flex-direction: column;
+				justify-content: center;
+				align-items: center;
+
+				q {
+					font-family: $paragraphs-font, sans-serif;
+					color: $globalFontColor;
+					font-size: 14px;
+					margin-bottom: 50px;
+					width: 80%;
+					text-align: center;
+					line-height: 20px;
+				}
+		
+				p {
+					font-family: $paragraphs-font, sans-serif;
+					color: $globalFontColor;
+					font-size: 14px;
+					font-weight: 700;
+					margin: 20px 0px 40px 0px;
+				}
+			}
+
+			.hide {
+				display: none;
+			}
+		}
+
+		.hide {
+			display: none;
+		}
 	}
 }
