@@ -107,6 +107,76 @@
     }
 }
 
+#accordion {
+    background-color: white;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    padding-bottom: 3em;
+    p {
+        font-family: $paragraphs-font;
+    }
+    h2 {
+        font-size: 2.75rem;
+        font-weight: 700;
+        font-family: $headings-font;
+    }
+    .gray-bar {
+        margin-top: 5em;
+    }
+    a {
+        text-decoration: none;
+        color: #3C3C3C;
+        &:visited {
+            color: #3C3C3C;
+        }
+    }
+    .accordion--header {
+        font-size: 19px;
+        margin-bottom: 1em;
+        margin-top: 3em;
+        h3 {
+            font-family: $headings-font;
+            font-weight: 700;
+            &:hover {
+                color: red;
+                transition: all 0.2s ease-in;
+            }
+        }
+        &::after {
+            content: "";
+            width: 2px;
+            height: 24px;
+            left: 33px;
+            top: 22px;
+            opacity: 0;
+            transition: all 0.2s ease;
+        }
+        &::before {
+            content:"";
+            width: 24px;
+            height: 2px;
+            left: 22px;
+            top: 33px;
+        }
+    }
+    .accordion--item {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: flex-start;
+        width: 50%;
+        text-align: justify;
+        .collapse {
+            transform: scaleY(0);
+        }
+        .show {
+            transform: scaleY(1);
+        }
+    }
+}
+
     @media screen and (max-width: 767px) {
         #about--certificates {
         .certificates--img {
