@@ -2,7 +2,7 @@
 @forward '../base/reset';
 
 main {
- background-color: $darkBackground;
+ background-color: $darkestBackground;
  color: $globalFontColor;
  font-family: $paragraphs-font;
 }
@@ -10,6 +10,12 @@ main {
 
 @media screen and (max-width: 411px) {
     .container-blog-body {
+        display: block;
+        margin: 0 auto;
+        width: 92.5%;
+        height: auto;
+        background-color:$darkBackground;
+    
 
         img {
             width: 100%;
