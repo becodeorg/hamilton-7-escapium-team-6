@@ -1,6 +1,92 @@
 @use '../utilities/variables' as *;
 @forward '../base/reset';
 
+@media screen and (min-width: 1280px) {
+	.contact {
+		display: flex;
+		flex-direction: row;
+		background-color: $darkBackground;
+		height: 80vh;
+		position: relative;
+
+		.map {
+			width: 50%;
+		}
+
+		.desktop-bar {
+			position: absolute;
+			top: 3%;
+			right: 46.5%;
+			width: 30px;
+			height: 3px;
+			background-color: rgba(128, 128, 128, 0.445);
+			margin-top: 30px;
+			margin-bottom: 20px;
+			margin-left: 20px;
+		}
+
+		form {
+			display: flex;
+			flex-direction: column;
+			width: 50%;
+			height: 90%;
+			margin: auto;
+			margin-left: 50px;
+
+			h2 {
+				color: $whiteBackground;
+				font-weight: 700;
+				font-size: 44px;
+				margin: 60px 0px 80px 0px;
+				font-family: $headings-font, sans-serif;
+			}
+
+			input, textarea {
+				outline: none;
+				margin-bottom: 60px;
+				font-family: $paragraphs-font, sans-serif;
+				background-color: $darkBackground;
+				border: none;
+				border-bottom: 1px solid rgba(128, 128, 128, 0.445);
+				color: $whiteBackground;
+				width: 70%;
+
+				&:focus {
+					border-bottom-color: $whiteBackground;
+				}
+			}
+
+			textarea {
+				height: 5em;
+				margin-bottom: 30px;
+			}
+
+			button {
+				display: flex;
+				justify-content: center;
+				align-items: center;
+				width: 180px;
+				height: 50px;
+				background-color: $darkBackground;
+				color: $whiteBackground;
+				font-family: $headings-font;
+				font-size: 11px;
+				font-weight: 700;
+				margin-top: 10px;
+				margin-bottom: 30px;
+				padding: 10px;
+				border-radius: 50px;
+				border: 1px solid rgba(128, 128, 128, 0.445);
+
+				&:hover {
+					background-color: rgba(255, 255, 255, 0.336);
+					transition: 0.33s;
+				}
+			}
+		}
+	}
+}
+
 @media screen and (min-width: 768px) and (max-width: 1279px) {
 	.contact {
 		display: flex;
