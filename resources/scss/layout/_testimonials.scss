@@ -1,5 +1,78 @@
 @use '../utilities/variables' as *;
 
+@media screen and (min-width: 1280px) {
+	.testimonials {
+		display: flex;
+		flex-direction: column;
+		justify-content: center;
+		align-items: center;
+		background-color: $whiteBackground;
+
+		h2 {
+			color: $darkestBackground;
+			font-weight: 700;
+			font-size: 44px;
+			margin-bottom: 50px;
+			font-family: $headings-font, sans-serif;
+		}
+
+		.testimonials-comments {
+			display: flex;
+			flex-direction: row;
+			width: 60%;
+
+			.testimonials-comment {
+				display: flex;
+				flex-direction: column;
+				justify-content: center;
+				align-items: center;
+
+				q {
+					font-family: $paragraphs-font, sans-serif;
+					color: $globalFontColor;
+					font-size: 14px;
+					margin-bottom: 50px;
+					width: 80%;
+					text-align: center;
+					line-height: 20px;
+				}
+		
+				p {
+					font-family: $paragraphs-font, sans-serif;
+					color: $globalFontColor;
+					font-size: 11px;
+					font-weight: 700;
+					margin: 20px 0px 40px 0px;
+				}
+
+				img {
+					width: 50px;
+					height: 50px;
+				}
+			}
+		}
+
+		.arrows {
+			display: flex;
+			justify-content: space-between;
+			align-items: center;
+			width: 10%;
+			max-width: 128px;
+			margin-bottom: 50px;
+
+			.line {
+				width: 70px;
+				height: 1px;
+				background-color: rgba(128, 128, 128, 0.445);
+				transform: rotate(-45deg);
+			}
+
+			i {
+				cursor: pointer;
+			}
+		}
+	}
+}
 
 @media screen and (min-width: 768px) and (max-width: 1279px) {
 	.testimonials {
