@@ -1,0 +1,45 @@
+@use '../utilities/variables' as *;
+@forward '../base/reset';
+
+#header {
+    height: 85vh;
+    background: url("../images/gallery/slide-1.jpg") no-repeat;
+    background-size: cover;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    #header--title {
+        color: white;
+        font-size: 60px;    
+        &::after {
+            content: ".";
+            color: red;
+        }
+    }
+    #breadcrumbs--dash {
+        color: $globalFontColor;
+        z-index: 1;
+    }
+    #header--breadcrumbs {
+        display: flex;
+        gap: 1em;
+        a {
+        text-decoration: none;
+        color: white;
+        transition: 0.2s;
+        &:visited {
+            color: white;
+        }
+        &:hover {
+            color: red;
+        }
+        }
+        #breadcrumbs--title {
+            color: $globalFontColor;
+            &:hover {
+                color: $red;
+            }
+        }
+    }
+}
