@@ -15,6 +15,7 @@ main {
         width: 92.5%;
         height: auto;
         background-color:$darkBackground;
+        margin-bottom: 3.5em;
 
         img {
             width: 100%;
@@ -152,6 +153,29 @@ main {
             } 
         }
 
+    }
+
+    .team{
+        display: flex;
+        flex-direction: row;
+        margin-top: 5em;
+        margin-bottom: 5em;
+        
+        #team{
+            margin-left: 1em;
+
+            h1{
+                font-family: $headings-font;
+                color: white;
+            }
+            h2{
+                font-size: 80%;
+            }
+            
+        }
+        .icon{
+            margin-left: 1.3em;
+        }
     }
 }
 
