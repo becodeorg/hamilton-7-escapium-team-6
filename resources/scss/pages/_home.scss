@@ -28,14 +28,15 @@ main {
 			flex-direction: column;
 			justify-content: space-between;
 			text-align: left;
-			margin-top: 100px;
-			margin-left: 50px;
+			position: absolute;
+			top: 13%;
+			left: 5%;
 			height: 30vh;
 
 			h1 {
 				font-weight: 700;
 				color: $whiteBackground;
-				font-size: 100px;
+				font-size: 7vw;
 				text-align: left;
 			}
 
@@ -66,6 +67,29 @@ main {
 				}
 			}
 		}
+
+		.carousel-lines {
+			display: flex;
+			flex-direction: column;
+			justify-content: space-between;
+			align-items: flex-end;
+			position: absolute;
+			right: 20px;
+			top: 40%;
+
+			.line {
+				width: 20px;
+				height: 2px;
+				background-color: rgba(128, 128, 128, 0.445);
+				margin-bottom: 20px;
+				cursor: pointer;
+			}
+
+			.active {
+				width: 40px;
+				background-color: $whiteBackground;
+			}
+		}
 	}
 
 	.gray-bar {
@@ -87,98 +111,129 @@ main {
 		h2 {
 			color: $whiteBackground;
 			font-weight: 700;
-			font-size: 19px;
+			font-size: 44px;
 			margin-bottom: 50px;
 		}
 
 		&__container-card {
-			width: 80%;
+			display: flex;
+			flex-direction: row-reverse;
+			justify-content: space-between;
+			width: 65%;
+			max-width: 830px;
 			margin-bottom: 50px;
-			background-color: $darkBackground;
 
-			img {
-				width: 100%;
-				height: 300px;
-			}
-
-			&__locks {
+			.right-side {
 				display: flex;
-				flex-direction: row;
-				justify-content: space-between;
-				margin-top: 20px;
-				margin-bottom: 30px;
-				width: 15%;
-				padding-left: 20px;
+				flex-direction: column;
 
-				.colored {
-					color: $red;
-				}
-
-				li {
-					color:rgba(128, 128, 128, 0.445);
+				img {
+					width: 500px;
+					height: 350px;
+					margin: auto;
 				}
 			}
 
-			h3 {
-				color: $whiteBackground;
-				font-weight: 700;
-				padding-left: 20px;
-				font-size: 21px;
-
-				&:hover {
-					color: $red;
-					transition: 0.33s;
-				}
-			}
-
-			&__infos {
+			.left-side {
 				display: flex;
-				flex-direction: row;
-				justify-content: space-between;
-				align-items: center;
-				color: #c2c2c2;
-				margin-top: 15px;
-				margin-bottom: 20px;
-				padding-left: 20px;
-				width: 30%;
+				flex-direction: column;
+				justify-content: center;
+				background-color: $darkBackground;
+				width: 500px;
+				height: 450px;
+				box-shadow: -5px 10px 5px -4px rgba(0,0,0,0.4);
 
-				p {
-					color: $globalFontColor;
-					font-size: 10px;
+				.features-rooms__container-card__locks {
+					display: flex;
+					flex-direction: row;
+					justify-content: space-between;
+					margin-top: 20px;
+					margin-bottom: 30px;
+					width: 100px;
+					padding-left: 20px;
+
+					.colored {
+						color: $red;
+					}
+
+					li {
+						color:rgba(128, 128, 128, 0.445);
+					}
+				}
+
+				h3 {
+					color: $whiteBackground;
 					font-weight: 700;
+					padding-left: 20px;
+					font-size: 32px;
+					cursor: pointer;
+
+					&:hover {
+						color: $red;
+						transition: 0.33s;
+					}
+				}
+
+				.features-rooms__container-card__infos {
+					display: flex;
+					flex-direction: row;
+					justify-content: space-between;
+					align-items: center;
+					color: #c2c2c2;
+					margin-top: 15px;
+					margin-bottom: 50px;
+					padding-left: 20px;
+					width: 250px;
+
+					p {
+						color: $globalFontColor;
+						font-size: 12px;
+						font-weight: 400;
+					}
+				}
+
+				.features-rooms__container-card__paragraph {
+					padding-left: 20px;
+					padding-right: 20px;
+					font-size: 12px;
+					font-weight: 400;
+					line-height: 20px;
+					color: $globalFontColor;
+					margin-bottom: 50px;
+				}
+
+				.features-rooms__container-card__button {
+					width: 150px;
+					margin-left: 20px;
+					margin-bottom: 30px;
+					padding-top: 10px;
+					padding-bottom: 10px;
+					padding-left: 25px;
+					padding-right: 25px;
+					outline: none;
+					border-style: none;
+					border-radius: 20px;
+					font-size: 12px;
+					color: $whiteBackground;
+					background-color: $red;
+					font-family: $headings-font, sans-serif;
+					font-weight: 700;
+					cursor: pointer;
+
+					&:hover {
+						background-color: #d40d10;
+						transition: 0.33s;
+					}
 				}
 			}
 
-			&__paragraph {
-				padding-left: 20px;
-				padding-right: 20px;
-				font-size: 12px;
-				line-height: 20px;
-				color: $globalFontColor;
-				margin-bottom: 30px;
+			.second-side {
+				box-shadow: 5px 10px 5px -4px rgba(0,0,0,0.4);
 			}
+		}
 
-			&__button {
-				margin-left: 20px;
-				margin-bottom: 30px;
-				padding-top: 10px;
-				padding-bottom: 10px;
-				padding-left: 25px;
-				padding-right: 25px;
-				outline: none;
-				border-style: none;
-				border-radius: 20px;
-				font-size: 12px;
-				color: $whiteBackground;
-				background-color: $red;
-				font-family: $headings-font, sans-serif;
-				font-weight: 700;
-
-				&:hover {
-					background-color: #d40d10;
-					transition: 0.33s;
-				}
-			}
+		.second {
+			flex-direction: row;
 		}
 	}
 
