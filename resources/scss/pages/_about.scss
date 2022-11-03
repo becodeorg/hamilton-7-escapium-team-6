@@ -38,9 +38,79 @@
 }
 
 #about--certificates {
-    background-color: $darkBackground;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    background-color: $darkestBackground;
     h2 {
         color: white;
+        font-weight: 700;
+        font-size: 19px;
+        margin-bottom: 80px;
+    }
+    .gray-bar {
+        margin-top: 5em;
+    }
+    .certificates--img {
+        display: grid;
+        grid-template-columns: 1fr 1fr 1fr 1fr;
+        gap: 1em;
+        margin-bottom: 5em;
+    }
+}
 
+.dark {
+    background-color: $darkestBackground;
+    .gray-bar {
+        margin-top: 5em;
+    }
+    h2 {
+        color: white;
+    }
+    i {
+        color: white;
+    }
+}
+
+#team {
+    background-color: $darkBackground;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    .gray-bar {
+        margin-top: 5em;
+    }
+    h2 {
+        color: white;
+        font-weight: 700;
+        font-size: 19px;
+        margin-bottom: 80px;
+    }
+    .staff--container {
+        display: grid;
+        grid-template-columns: 1fr 1fr 1fr;
+        gap: 1em;
+        .team--staff {
+            display: flex;
+            flex-direction: column;
+            margin-bottom: 5em;
+            .staff--name {
+                color: white;
+                margin: 2em 0 0 2em;
+            }
+            .staff--role {
+                content: "Co-Creator";
+            }
+        }
+    }
+}
+
+    @media screen and (max-width: 767px) {
+        #about--certificates {
+        .certificates--img {
+            grid-template-columns: 1fr;
+        }
     }
 }
