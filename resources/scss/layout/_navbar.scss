@@ -115,7 +115,7 @@ header {
         flex-direction: row;
         align-items: center;
         justify-content: space-between;
-        background-color: rgba(25, 25, 25, 0.4);
+        background-color: rgba(25, 25, 25, 0.5);
         position: fixed;
         top: 0;
         width: 100%;
@@ -133,7 +133,8 @@ header {
         }
         #navbar-menu {
             a {
-                margin-left: 1em;
+                margin-left: 2em;
+                font-weight: 700;
             }
             .navbar-item__active {
                 color: white;
@@ -188,15 +189,6 @@ header {
         display: none;
     }
     #navbar-right__desktop {
-        a {
-            color: white;
-            &:hover {
-                color: $red;
-            }
-            i {
-                padding-right: 1em;
-            }
-        }
         i {
             font-size: 16px;
             &:hover {
@@ -204,13 +196,31 @@ header {
                 cursor: pointer;
             }
         }
+        a {
+            color: white;
+            &:hover {
+                color: $red;
+                i {
+                    color: white;
+                }
+            }
+            i {
+                padding-right: 1em;
+                &:hover {
+                    color: white;
+                }
+            }
+        }
         p {
             color: $globalFontColor;
         }
         #book-now {
             font-weight: 700;
-            padding: 1em 1.5em;
-            border-radius: 25px;
+            padding: 0.8rem 2rem;
+            font-size: 0.75rem;
+            line-height: 1.25;
+            border-radius: 1.5rem;
+            transition: all 0.15s ease-in-out;
             border: 1px solid $globalFontColor;
             transition: 0.2s;
             &:hover {
