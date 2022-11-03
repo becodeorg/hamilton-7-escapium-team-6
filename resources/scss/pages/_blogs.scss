@@ -10,6 +10,7 @@ main {
 
 @media screen and (max-width: 411px) {
     .container-blog-body {
+
         img {
             width: 100%;
             height: 300px;
@@ -34,6 +35,24 @@ main {
             padding-bottom: 1em;
             padding-top: 2em;
         }
+        #button-blog {
+            width: 60%;
+            margin-top: 35px;
+            margin-bottom: 25px;
+
+            button{
+                border-collapse: initial;
+                color: white;
+                background-color: $darkBackground;
+                border-color: $globalFontColor;
+                font-family: $paragraphs-font;
+                border-radius: 30px;
+                border-width: 1px;
+                border-style: solid;
+                margin: 1px;
+            }
+        }
+
     }
     .container-blog-info {
         h1 {
@@ -64,6 +83,8 @@ main {
                 flex-direction: row;
                 justify-content: space-between;  
             }
+
+            
         }
     }
 }
