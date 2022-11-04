@@ -11,10 +11,11 @@
     flex-direction: column;
     #header--title {
         color: white;
+        font-family: $headings-font;
         font-size: 60px;    
         &::after {
             content: ".";
-            color: red;
+            color: $red;
         }
     }
     #breadcrumbs--dash {
@@ -22,6 +23,7 @@
         z-index: 1;
     }
     #header--breadcrumbs {
+        font-family: $paragraphs-font;
         display: flex;
         gap: 1em;
         a {
