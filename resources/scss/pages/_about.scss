@@ -73,7 +73,7 @@
     }
 }
 
-#team {
+#footer--team {
     background-color: $darkBackground;
     display: flex;
     justify-content: center;
@@ -101,8 +101,9 @@
                 margin: 2em 0 0 2em;
             }
             .staff--role {
-                content: "Co-Creator";
+                font-size: 10px;
             }
+            color: $globalFontColor;
         }
     }
 }
@@ -146,6 +147,7 @@
         }
         &::after {
             content: "";
+            position: absolute;
             width: 2px;
             height: 24px;
             left: 33px;
@@ -155,6 +157,7 @@
         }
         &::before {
             content:"";
+            position: absolute;
             width: 24px;
             height: 2px;
             left: 22px;
