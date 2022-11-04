@@ -1,0 +1,63 @@
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Escapium</title>
+	<link rel="preconnect" href="https://fonts.googleapis.com">
+	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+	<link rel="stylesheet" href="resources/css/style.css">
+	<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" />
+	<link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+	<script src="https://kit.fontawesome.com/a71d3d52db.js" crossorigin="anonymous"></script>
+	<script src="./resources/js/index.js"></script>
+	<script src="./resources/js/navbar.js"></script>
+</head>
+<body>
+	<main>
+		<section id="header">
+			<h1 id="header--title">about</h1>
+			<div id="header--breadcrumbs">
+				<a href="index.html">Home</a>
+				<p id="breadcrumbs--dash">></p>
+				<a href="about.html" id="breadcrumbs--title">About</a>
+			</div>
+		</section>
+
+		<section class="container-contacts">
+			<div class="contacts-elements">
+				<div class="get-in-touch">
+					<h3>Get in Touch</h3>
+					<p>If you are interested in working with us, please get in touch</p>
+					<ul>
+						<li>
+							<i class="fa-regular fa-map"></i>
+							<p>
+								2390 RoadHill St., Suite 100
+								North Downtown, NY 82153
+							</p>
+						</li>
+						<li>
+							<i class="fa-solid fa-phone"></i>
+							<p>+1800 900 1248</p>
+						</li>
+						<li>
+							<i class="fa-regular fa-envelope"></i>
+							<p class="last">info@escapium.com</p>
+						</li>
+					</ul>
+				</div>
+				<form>
+					<h3>Contact Form</h3>
+					<div class="top-elements">
+						<input type="text" name="name" id="name" placeholder="Your Name..." autocomplete="off" required>
+						<input type="email" name="email" id="email" placeholder="Your Email Adress..." autocomplete="off" required>
+					</div>
+					<textarea name="message" id="message" placeholder="Your Message..." autocomplete="off" required></textarea>
+					<button type="submit" id="btn-submit">Send Message</button>
+				</form>
+			</div>
+		</section>
+	</main>
+</body>
+</html>

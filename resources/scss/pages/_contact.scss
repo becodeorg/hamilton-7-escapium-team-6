@@ -1,0 +1,364 @@
+@use '../utilities/variables' as *;
+
+@media screen and (min-width: 1280px) {
+	.container-contacts {
+		display: flex;
+		flex-direction: row;
+		width: 80%;
+		margin: auto;
+		padding: 100px;
+
+		h3 {
+			font-size: 32px;
+			font-family: $headings-font, sans-serif;
+			color: $whiteBackground;
+			font-weight: 700;
+		}
+
+		.contacts-elements {
+			display: flex;
+			flex-direction: row;
+			margin: auto;
+
+			.get-in-touch {
+				display: flex;
+				flex-direction: column;
+				padding: 20px;
+				margin-bottom: 20px;
+				width: 30%;
+
+				p {
+					font-size: 16px;
+					font-family: $paragraphs-font, sans-serif;
+					color: $globalFontColor;
+					margin-top: 20px;
+					margin-bottom: 20px;
+				}
+
+				ul {
+					display: flex;
+					flex-direction: column;
+
+					li {
+						display: flex;
+						flex-direction: row;
+						align-items: center;
+
+						.last {
+							color: $whiteBackground;
+						}
+
+						p {
+							width: 68%;
+							margin-left: 25px;
+							font-size: 16px;
+						}
+
+						i {
+							font-size: 32px;
+							color: $whiteBackground;
+						}
+					}
+				}
+			}
+
+			form {
+				display: flex;
+				flex-direction: column;
+				padding: 20px;
+				margin-bottom: 20px;
+				width: 60%;
+
+				.top-elements {
+					display: flex;
+					flex-direction: row;
+					justify-content: space-between;
+
+					input {
+						margin-top: 20px;
+						outline: none;
+						color: $whiteBackground;
+						border: none;
+						background-color: $darkestBackground;
+						border-bottom: 1px solid $globalFontColor;
+						font-family: $paragraphs-font, sans-serif;
+						padding: 10px;
+						width: 250px;
+						font-size: 16px;
+					}
+				}
+
+				textarea {
+					margin-top: 50px;
+					outline: none;
+					font-family: $paragraphs-font, sans-serif;
+					background-color: $darkestBackground;
+					border: none;
+					border-bottom: 1px solid rgba(128, 128, 128, 0.445);
+					color: $whiteBackground;
+					height: 100px;
+					font-size: 16px;
+				}
+
+				button {
+					display: flex;
+					justify-content: center;
+					align-items: center;
+					width: 90%;
+					height: 50px;
+					background-color: $red;
+					color: $whiteBackground;
+					font-family: $headings-font;
+					font-size: 11px;
+					font-weight: 700;
+					margin: auto;
+					margin-top: 30px;
+					margin-bottom: 30px;
+					padding: 10px;
+					border-radius: 50px;
+					border: 1px solid rgba(128, 128, 128, 0.445);
+					cursor: pointer;
+	
+					&:hover {
+						background-color: #d40d10;
+						transition: 0.33s;
+					}
+				}
+			}
+		}
+	}
+}
+
+@media screen and (min-width: 768px) and (max-width: 1279px) {
+	.container-contacts {
+
+		h3 {
+			font-size: 19px;
+			font-family: $headings-font, sans-serif;
+			color: $whiteBackground;
+			font-weight: 700;
+		}
+
+		.contacts-elements {
+			display: flex;
+			flex-direction: row;
+
+			.get-in-touch {
+				display: flex;
+				flex-direction: column;
+				padding: 20px;
+				margin-bottom: 20px;
+				width: 20%;
+
+				p {
+					font-size: 14px;
+					font-family: $paragraphs-font, sans-serif;
+					color: $globalFontColor;
+					margin-top: 20px;
+					margin-bottom: 20px;
+				}
+
+				ul {
+					display: flex;
+					flex-direction: column;
+
+					li {
+						display: flex;
+						flex-direction: row;
+						align-items: center;
+
+						.last {
+							color: $whiteBackground;
+						}
+
+						p {
+							width: 50%;
+							margin-left: 25px;
+						}
+
+						i {
+							font-size: 32px;
+							color: $whiteBackground;
+						}
+					}
+				}
+			}
+
+			form {
+				display: flex;
+				flex-direction: column;
+				padding: 20px;
+				margin-bottom: 20px;
+				width: 80%;
+
+				.top-elements {
+					display: flex;
+					flex-direction: row;
+					justify-content: space-between;
+
+					input {
+						margin-top: 20px;
+						outline: none;
+						color: $whiteBackground;
+						border: none;
+						background-color: $darkestBackground;
+						border-bottom: 1px solid $globalFontColor;
+						font-family: $paragraphs-font, sans-serif;
+						padding: 10px;
+						width: 250px;
+					}
+				}
+
+				textarea {
+					margin-top: 20px;
+					outline: none;
+					font-family: $paragraphs-font, sans-serif;
+					background-color: $darkestBackground;
+					border: none;
+					border-bottom: 1px solid rgba(128, 128, 128, 0.445);
+					color: $whiteBackground;
+					height: 100px;
+				}
+
+				button {
+					display: flex;
+					justify-content: center;
+					align-items: center;
+					width: 90%;
+					height: 50px;
+					background-color: $red;
+					color: $whiteBackground;
+					font-family: $headings-font;
+					font-size: 11px;
+					font-weight: 700;
+					margin: auto;
+					margin-top: 30px;
+					margin-bottom: 30px;
+					padding: 10px;
+					border-radius: 50px;
+					border: 1px solid rgba(128, 128, 128, 0.445);
+					cursor: pointer;
+	
+					&:hover {
+						background-color: rgba(255, 255, 255, 0.336);
+						transition: 0.33s;
+					}
+				}
+			}
+		}
+	}
+}
+
+@media screen and (max-width: 767px) {
+	.container-contacts {
+
+		h3 {
+			font-size: 19px;
+			font-family: $headings-font, sans-serif;
+			color: $whiteBackground;
+			font-weight: 700;
+		}
+
+		.contacts-elements {
+
+			.get-in-touch {
+				display: flex;
+				flex-direction: column;
+				padding: 20px;
+				margin-bottom: 20px;
+
+				p {
+					font-size: 14px;
+					font-family: $paragraphs-font, sans-serif;
+					color: $globalFontColor;
+					margin-top: 20px;
+					margin-bottom: 20px;
+				}
+
+				ul {
+					display: flex;
+					flex-direction: column;
+
+					li {
+						display: flex;
+						flex-direction: row;
+						align-items: center;
+
+						.last {
+							color: $whiteBackground;
+						}
+
+						p {
+							width: 50%;
+							margin-left: 25px;
+						}
+
+						i {
+							font-size: 32px;
+							color: $whiteBackground;
+						}
+					}
+				}
+			}
+
+			form {
+				display: flex;
+				flex-direction: column;
+				padding: 20px;
+				margin-bottom: 20px;
+
+				.top-elements {
+					display: flex;
+					flex-direction: column;
+
+					input {
+						margin-top: 20px;
+						outline: none;
+						color: $whiteBackground;
+						border: none;
+						background-color: $darkestBackground;
+						border-bottom: 1px solid $globalFontColor;
+						font-family: $paragraphs-font, sans-serif;
+						padding: 10px;
+					}
+				}
+
+				textarea {
+					margin-top: 20px;
+					outline: none;
+					font-family: $paragraphs-font, sans-serif;
+					background-color: $darkestBackground;
+					border: none;
+					border-bottom: 1px solid rgba(128, 128, 128, 0.445);
+					color: $whiteBackground;
+					height: 100px;
+				}
+
+				button {
+					display: flex;
+					justify-content: center;
+					align-items: center;
+					width: 90%;
+					height: 50px;
+					background-color: $red;
+					color: $whiteBackground;
+					font-family: $headings-font;
+					font-size: 11px;
+					font-weight: 700;
+					margin: auto;
+					margin-top: 30px;
+					margin-bottom: 30px;
+					padding: 10px;
+					border-radius: 50px;
+					border: 1px solid rgba(128, 128, 128, 0.445);
+					cursor: pointer;
+	
+					&:hover {
+						background-color: rgba(255, 255, 255, 0.336);
+						transition: 0.33s;
+					}
+				}
+			}
+		}
+	}
+}

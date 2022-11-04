@@ -115,7 +115,7 @@ header {
         flex-direction: row;
         align-items: center;
         justify-content: space-between;
-        background-color: rgba(25, 25, 25, 0.4);
+        background-color: rgba(25, 25, 25, 0.5);
         position: fixed;
         top: 0;
         width: 100%;
@@ -123,42 +123,51 @@ header {
         a {
             text-decoration: none;
             font-family: $headings-font;
-            color: white;
+            color: $globalFontColor;
             &:visited {
-                color: white;
+                color: $globalFontColor;
             }
             &:hover {
                 color: white;
             }
         }
-        .navbar-item--active {
-            color: white;
-            position: relative;
-            &::before {
-                position: absolute;
-                z-index: 0;
-                top: 10px;
-                content: "";
-                width: 50px;
-                height: 2.5px;
-                background-color: $red;
-                transform: rotate(-45deg);
+        #navbar-menu {
+            a {
+                margin-left: 2em;
+                font-weight: 700;
+                transition: 0.2s;
             }
-            &:hover::before {
-                position: absolute;
-                z-index: 0;
-                top: 10px;
-                content: "";
-                width: 50px;
-                height: 2.5px;
-                background-color: $red;
-                transform: rotate(-45deg);
+            .navbar-item__active {
+                color: white;
+                position: relative;
+                &::before {
+                    position: absolute;
+                    z-index: 0;
+                    top: 10px;
+                    content: "";
+                    width: 50px;
+                    height: 2.5px;
+                    background-color: $red;
+                    transform: rotate(-45deg);
+                    z-index: 5;
+                }
+                &:hover::before {
+                    position: absolute;
+                    z-index: 0;
+                    top: 10px;
+                    content: "";
+                    width: 50px;
+                    height: 2.5px;
+                    background-color: $red;
+                    transform: rotate(-45deg);
+                    z-index: 4;
+                }
             }
         }
-    }
     ul li {
         display: inline-block;
-        margin-left: 1em;
+        transition: 0.2s;
+        z-index: 1;
         &:hover::before {
             position: absolute;
             z-index: 0;
@@ -168,8 +177,10 @@ header {
             height: 2.5px;
             background-color: $red;
             transform: rotate(-45deg);
+            transition: 2s;
         }
     }
+}
     #navbar-left {
         display: flex;
         flex-direction: row;
@@ -179,15 +190,6 @@ header {
         display: none;
     }
     #navbar-right__desktop {
-        a {
-            color: white;
-            &:hover {
-                color: $red;
-            }
-            i {
-                padding-right: 1em;
-            }
-        }
         i {
             font-size: 16px;
             &:hover {
@@ -195,16 +197,36 @@ header {
                 cursor: pointer;
             }
         }
+        a {
+            color: white;
+            &:hover {
+                color: $red;
+                i {
+                    color: white;
+                }
+            }
+            i {
+                padding-right: 1em;
+                &:hover {
+                    color: white;
+                }
+            }
+        }
         p {
             color: $globalFontColor;
         }
         #book-now {
             font-weight: 700;
-            padding: 1em 1.5em;
-            border-radius: 25px;
+            padding: 0.8rem 2rem;
+            font-size: 0.75rem;
+            line-height: 1.25;
+            border-radius: 1.5rem;
+            transition: all 0.15s ease-in-out;
             border: 1px solid $globalFontColor;
+            transition: 0.2s;
             &:hover {
-                border-color: white;
+                background-color: $globalFontColor;
+                color: white;
             }
         }
         #header-signin {
