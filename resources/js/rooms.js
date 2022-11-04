@@ -12,85 +12,92 @@ async function addNavbar() {
 addFooter();
 addNavbar();
 
-import datas from './data/rooms.json' assert {type: 'json'};
+// import datas from './data/rooms.json' assert {type: 'json'};
 
-const section = document.createElement("section");
-section.classList.add("rooms");
+async function fetchRooms(){
+    const response = await fetch('./resources/js/data/rooms.json');
+    const datas = await response.json();
 
-const mainElement = document.querySelector("main");
+    const section = document.createElement("section");
+    section.classList.add("rooms");
 
-mainElement.appendChild(section);
+    const mainElement = document.querySelector("main");
 
-for (let i = 0; i < datas.length; i++) {
-    const room = datas[i];
+    mainElement.appendChild(section);
 
-    const article = document.createElement("article");
-    article.classList.add("room-box");
-    section.appendChild(article);
+    for (let i = 0; i < datas.length; i++) {
+        const room = datas[i];
 
-    const boxElements = document.createElement("div");
-    boxElements.classList.add("box-elements");
-    article.appendChild(boxElements);
+        const article = document.createElement("article");
+        article.classList.add("room-box");
+        section.appendChild(article);
 
-    article.style.backgroundImage = "linear-gradient(180deg, rgba(27,27,27,0.5) 0%, rgba(27,27,27,1) 100%)," +
-                                    "url( " + datas[i].photos[0] + ")";
+        const boxElements = document.createElement("div");
+        boxElements.classList.add("box-elements");
+        article.appendChild(boxElements);
 
-    const ul = document.createElement("ul");
-    boxElements.appendChild(ul);
+        article.style.backgroundImage = "linear-gradient(180deg, rgba(27,27,27,0.5) 0%, rgba(27,27,27,1) 100%)," +
+                                        "url( " + datas[i].photos[0] + ")";
 
-    let difficulty = room.difficulty;
-    for (let j = 0; j < 5; j++) {
-        const li = document.createElement("li");
-        const i = document.createElement("i");
+        const ul = document.createElement("ul");
+        boxElements.appendChild(ul);
 
-        if (difficulty > 0) {
-            i.classList.add("colored");
-            difficulty--;
+        let difficulty = room.difficulty;
+        for (let j = 0; j < 5; j++) {
+            const li = document.createElement("li");
+            const i = document.createElement("i");
+
+            if (difficulty > 0) {
+                i.classList.add("colored");
+                difficulty--;
+            }
+
+            i.classList.add("fa");
+            i.classList.add("fa-lock");
+            i.setAttribute("aria-hidde", "true");
+            
+            li.appendChild(i);
+            ul.appendChild(li);
         }
 
-        i.classList.add("fa");
-        i.classList.add("fa-lock");
-        i.setAttribute("aria-hidde", "true");
-        
-        li.appendChild(i);
-        ul.appendChild(li);
+        const h3 = document.createElement("h3");
+        h3.innerText = room.name;
+        boxElements.appendChild(h3);
+
+        const divCardInfos = document.createElement("div");
+        divCardInfos.classList.add("card-infos");
+        boxElements.appendChild(divCardInfos);
+
+        const iconPlayers = document.createElement("i");
+        iconPlayers.classList.add("fa");
+        iconPlayers.classList.add("fa-users");
+        iconPlayers.setAttribute("aria-hidde", "true");
+        divCardInfos.appendChild(iconPlayers);
+
+        const pPlayers = document.createElement("p");
+        pPlayers.innerText = room.players[0] + "-" + room.players[1];
+        divCardInfos.appendChild(pPlayers);
+
+        const iconClock = document.createElement("i");
+        iconClock.classList.add("fa");
+        iconClock.classList.add("fa-clock-o");
+        iconClock.setAttribute("aria-hidde", "true");
+        divCardInfos.appendChild(iconClock);
+
+        const pClock = document.createElement("p");
+        pClock.innerText = room.minutes;
+        divCardInfos.appendChild(pClock);
+
+        const iconLocation = document.createElement("i");
+        iconLocation.classList.add("fa");
+        iconLocation.classList.add("fa-map-marker");
+        iconLocation.setAttribute("aria-hidde", "true");
+        divCardInfos.appendChild(iconLocation);
+
+        const pLoc = document.createElement("p");
+        pLoc.innerText = room.location;
+        divCardInfos.appendChild(pLoc);
     }
-
-    const h3 = document.createElement("h3");
-    h3.innerText = room.name;
-    boxElements.appendChild(h3);
-
-    const divCardInfos = document.createElement("div");
-    divCardInfos.classList.add("card-infos");
-    boxElements.appendChild(divCardInfos);
-
-    const iconPlayers = document.createElement("i");
-    iconPlayers.classList.add("fa");
-    iconPlayers.classList.add("fa-users");
-    iconPlayers.setAttribute("aria-hidde", "true");
-    divCardInfos.appendChild(iconPlayers);
-
-    const pPlayers = document.createElement("p");
-    pPlayers.innerText = room.players[0] + "-" + room.players[1];
-    divCardInfos.appendChild(pPlayers);
-
-    const iconClock = document.createElement("i");
-    iconClock.classList.add("fa");
-    iconClock.classList.add("fa-clock-o");
-    iconClock.setAttribute("aria-hidde", "true");
-    divCardInfos.appendChild(iconClock);
-
-    const pClock = document.createElement("p");
-    pClock.innerText = room.minutes;
-    divCardInfos.appendChild(pClock);
-
-    const iconLocation = document.createElement("i");
-    iconLocation.classList.add("fa");
-    iconLocation.classList.add("fa-map-marker");
-    iconLocation.setAttribute("aria-hidde", "true");
-    divCardInfos.appendChild(iconLocation);
-
-    const pLoc = document.createElement("p");
-    pLoc.innerText = room.location;
-    divCardInfos.appendChild(pLoc);
 }
+
+fetchRooms();
