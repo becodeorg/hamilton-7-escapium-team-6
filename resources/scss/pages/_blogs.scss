@@ -15,7 +15,8 @@ main {
         width: 92.5%;
         height: auto;
         background-color:$darkBackground;
-
+        margin-bottom: 3.5em;
+        box-shadow: red;
         img {
             width: 100%;
             height: 300px;
@@ -108,8 +109,8 @@ main {
         padding-bottom: 6%;
         .pic_Andy{
             img{
-                width: 80px;
-                height: 80px;
+                width: 65px;
+                height: 65px;
                 border-radius: 50px;
             }
         }
@@ -152,6 +153,143 @@ main {
             } 
         }
 
+    }
+
+    .team{
+        display: flex;
+        flex-direction: row;
+        margin-top: 5em;
+        margin-bottom: 5em;
+        
+        #team{
+            margin-left: 1em;
+          
+            
+
+            h1{
+                font-family: $headings-font;
+                color: white;
+               
+            }
+            h2{
+                font-size: 80%;
+                
+            }
+            
+        }
+        .icon{
+            margin-left: 1.3em;
+        }
+    }
+
+    .container-comments{
+        margin: auto;
+        width: 95%;
+        
+
+        img{
+            width: 65px;
+            height: 65px;
+            border-radius: 50px;
+            margin-right: 1em;
+            margin-top: 2.5em;
+        }
+        .grey-bar{
+            width: 30px;
+            height: 3.5px;
+            background-color: rgba(128, 128, 128, 0.445);
+            margin-top: 15px;
+            //margin-bottom: 40px;   
+        }
+        .comments{
+            display: flex;
+            flex-direction: row;
+            width: 90%;
+            display: flex;
+            align-items: center;
+            //margin: 0 auto;
+            margin-bottom: 1em;
+
+            h3{
+                font-family: $headings-font;
+                color: white;
+                font-size: 80%;
+            }
+            p{
+                font-size: 65%;
+            }
+        }
+      
+        h2{
+            color: white;
+            font-size: 180%;
+            //margin-bottom: 2em;
+        }
+        #comments{
+            p{
+                font-size: 80%;
+                text-align: left;
+                margin-bottom: 1.5em;
+                line-height: 18px;
+            }
+
+            a{
+                font-size: 80%;
+                color: antiquewhite;
+                font-family: $headings-font;
+            }
+        }
+      
+    }
+    .leave-a-comment{
+        font-size: 85%;
+        width: 95%;
+        margin: auto;
+        .grey-bar{
+            width: 30px;
+            height: 3.5px;
+            background-color: rgba(128, 128, 128, 0.445);
+            margin-top: 15px;
+            //margin-bottom: 40px;   
+        }
+        .gigabar{
+            width: 100%;
+            height: 2.5px;
+            background-color: rgba(128, 128, 128, 0.445);
+            margin-top: 10px; 
+        }
+        .name{
+            margin-top: 2.5em;
+        }
+        .your-email{
+            margin-top: 2em;
+        }
+        .type-comment{
+            margin-top: 2em;
+        }
+        .save-info{
+            margin-top: 2em;
+            margin-bottom: 2em;
+            display: flex;
+            flex-direction: row;
+        i{
+            margin-right: 1em;
+        }
+        }
+        .post-your-comment{
+            border-collapse: initial;
+            color: white;
+            background-color: $darkestBackground;
+            border-color: $globalFontColor;
+            font-family: $paragraphs-font;
+            border-radius: 30px;
+            border-width: 1px;
+            border-style: solid;
+            margin: 1px;
+            height: 45px;
+            width: 180px;
+            margin-bottom: 6em;
+        }
     }
 }
 
