@@ -3,3 +3,4 @@ node_modules
 *.idea
 /resources/css/style.css
 /resources/css/style.css.map
+/resources/js/temp.js
