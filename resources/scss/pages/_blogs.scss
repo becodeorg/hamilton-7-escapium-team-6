@@ -109,8 +109,8 @@ main {
         padding-bottom: 6%;
         .pic_Andy{
             img{
-                width: 80px;
-                height: 80px;
+                width: 65px;
+                height: 65px;
                 border-radius: 50px;
             }
         }
@@ -176,6 +176,54 @@ main {
         .icon{
             margin-left: 1.3em;
         }
+    }
+
+    .container-comments{
+        margin: 0 auto;
+        
+
+        img{
+            width: 65px;
+            height: 65px;
+            border-radius: 50px;
+            margin-right: 1em;
+        }
+        .comments{
+            display: flex;
+            flex-direction: row;
+            width: 90%;
+            display: flex;
+            align-items: center;
+            margin: 0 auto;
+
+            h3{
+                font-family: $headings-font;
+                color: white;
+                font-size: 80%;
+            }
+            p{
+                font-size: 65%;
+            }
+        }
+      
+        h2{
+            color: white;
+            font-size: 180%;
+            margin-bottom: 2em;
+        }
+        #comments{
+            margin: 0 auto;
+            p{
+                font-size: 80%;
+                text-align: left;
+            }
+
+            a{
+                font-size: 80%;
+                color: antiquewhite;
+            }
+        }
+      
     }
 }
 
