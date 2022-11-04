@@ -32,8 +32,8 @@ for (let i = 0; i < datas.length; i++) {
     boxElements.classList.add("box-elements");
     article.appendChild(boxElements);
 
-            article.style.backgroundImage = "linear-gradient(180deg, rgba(27,27,27,0.5) 0%, rgba(27,27,27,1) 100%)," +
-                                            "url( " + datas[i].photos[0] + ")";
+    article.style.backgroundImage = "linear-gradient(180deg, rgba(27,27,27,0.5) 0%, rgba(27,27,27,1) 100%)," +
+                                    "url( " + datas[i].photos[0] + ")";
 
     const ul = document.createElement("ul");
     boxElements.appendChild(ul);
