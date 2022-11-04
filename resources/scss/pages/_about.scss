@@ -46,15 +46,17 @@
     h2 {
         color: white;
         font-weight: 700;
-        font-size: 19px;
+        font-size: 2.75rem;
         margin-bottom: 80px;
     }
     .gray-bar {
         margin-top: 5em;
     }
     .certificates--img {
-        display: grid;
-        grid-template-columns: 1fr 1fr 1fr 1fr;
+        display: flex;
+        flex-wrap:wrap;
+        align-items: center;
+        justify-content: center;
         gap: 1em;
         margin-bottom: 5em;
     }
@@ -67,6 +69,7 @@
     }
     h2 {
         color: white;
+        font-size: 2.75rem
     }
     i {
         color: white;
@@ -76,6 +79,7 @@
 #footer--team {
     background-color: $darkBackground;
     display: flex;
+    flex-wrap: wrap;
     justify-content: center;
     align-items: center;
     flex-direction: column;
@@ -85,20 +89,27 @@
     h2 {
         color: white;
         font-weight: 700;
-        font-size: 19px;
+        font-size: 2.75rem;
         margin-bottom: 80px;
     }
     .staff--container {
-        display: grid;
-        grid-template-columns: 1fr 1fr 1fr;
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
         gap: 1em;
         .team--staff {
+            .staff-peep {
+                margin: 2em 0 0 2em;
+                width: 50%;
+            }
             display: flex;
             flex-direction: column;
             margin-bottom: 5em;
             .staff--name {
                 color: white;
-                margin: 2em 0 0 2em;
+                font-family: $headings-font;
+                font-weight: 700;
+                font-size: 1.5rem;
             }
             .staff--role {
                 font-size: 10px;
@@ -137,11 +148,12 @@
         font-size: 19px;
         margin-bottom: 1em;
         margin-top: 3em;
+        cursor: pointer;
         h3 {
             font-family: $headings-font;
             font-weight: 700;
             &:hover {
-                color: red;
+                color: $red;
                 transition: all 0.2s ease-in;
             }
         }
@@ -173,17 +185,27 @@
         text-align: justify;
         .collapse {
             transform: scaleY(0);
+            display: none;
         }
         .show {
             transform: scaleY(1);
+            display: block;
         }
     }
 }
 
-    @media screen and (max-width: 767px) {
+    /* @media screen and (max-width: 767px) {
         #about--certificates {
         .certificates--img {
             grid-template-columns: 1fr;
         }
     }
 }
+    @media screen and (min-width: 768px) and (max-width: 1279px) {
+        #about--certificates {
+        .certificates--img{
+            gap: 1em;
+            grid-template-columns: 1fr 1fr;
+        }
+    }
+} */
