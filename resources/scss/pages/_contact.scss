@@ -127,6 +127,10 @@
 			}
 		}
 	}
+
+	.map {
+		height: 60vh;
+	}
 }
 
 @media screen and (min-width: 768px) and (max-width: 1279px) {
@@ -247,6 +251,10 @@
 			}
 		}
 	}
+
+	.map {
+		height: 60vh;
+	}
 }
 
 @media screen and (max-width: 767px) {
@@ -360,5 +368,9 @@
 				}
 			}
 		}
+	}
+
+	.map {
+		height: 60vh;
 	}
 }
