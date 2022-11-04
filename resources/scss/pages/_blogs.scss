@@ -16,7 +16,7 @@ main {
         height: auto;
         background-color:$darkBackground;
         margin-bottom: 3.5em;
-
+        box-shadow: red;
         img {
             width: 100%;
             height: 300px;
@@ -194,6 +194,13 @@ main {
             margin-right: 1em;
             margin-top: 2.5em;
         }
+        .grey-bar{
+            width: 30px;
+            height: 3.5px;
+            background-color: rgba(128, 128, 128, 0.445);
+            margin-top: 15px;
+            //margin-bottom: 40px;   
+        }
         .comments{
             display: flex;
             flex-direction: row;
@@ -233,6 +240,56 @@ main {
             }
         }
       
+    }
+    .leave-a-comment{
+        font-size: 85%;
+        width: 95%;
+        margin: auto;
+        .grey-bar{
+            width: 30px;
+            height: 3.5px;
+            background-color: rgba(128, 128, 128, 0.445);
+            margin-top: 15px;
+            //margin-bottom: 40px;   
+        }
+        .gigabar{
+            width: 100%;
+            height: 2.5px;
+            background-color: rgba(128, 128, 128, 0.445);
+            margin-top: 10px; 
+        }
+        .name{
+            margin-top: 2.5em;
+        }
+        .your-email{
+            margin-top: 2em;
+        }
+        .type-comment{
+            margin-top: 2em;
+        }
+        .save-info{
+            margin-top: 2em;
+            margin-bottom: 2em;
+            display: flex;
+            flex-direction: row;
+        i{
+            margin-right: 1em;
+        }
+        }
+        .post-your-comment{
+            border-collapse: initial;
+            color: white;
+            background-color: $darkestBackground;
+            border-color: $globalFontColor;
+            font-family: $paragraphs-font;
+            border-radius: 30px;
+            border-width: 1px;
+            border-style: solid;
+            margin: 1px;
+            height: 45px;
+            width: 180px;
+            margin-bottom: 6em;
+        }
     }
 }
 
