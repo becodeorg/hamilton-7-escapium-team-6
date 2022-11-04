@@ -39,19 +39,14 @@ function checkboxBurger() {
     let scrollTop = window.pageYOffset || document.documentElement.scrollTop;
     let header = document.querySelector('header') !== null;
     if(scrollTop > lastScrollTop){
-        if (header && scrollTop >= 350) {
+        if (header && scrollTop > 350) {
         removeNavbar();
         }
         else {
-            return;
         }
     }
     else{
         if (header) {
-            }
-            else if (scrollTop >= 350) {
-                addNavbar();
-                return;
             }
             else {
                 addNavbar();
