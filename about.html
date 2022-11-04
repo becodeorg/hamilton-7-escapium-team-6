@@ -12,6 +12,7 @@
 	<link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
 	<script src="https://kit.fontawesome.com/a71d3d52db.js" crossorigin="anonymous"></script>
 	<script src="./resources/js/navbar.js"></script>
+    <script src="./resources/js/header.js"></script>
 </head>
 <body>
         <main>
@@ -79,13 +80,17 @@
                 </div>
                 <div class="team--staff">
                     <img src="./resources/images/gallery/member-photo-2.jpg">
-                    <p class="staff--name">Mona Sterling</p>
-                    <p class="staff--role">Co-Creator</p>
+                    <div class="staff-peep">
+                        <p class="staff--name">Mona Sterling</p>
+                        <p class="staff--role">Co-Creator</p>
+                    </div>
                 </div>
                 <div class="team--staff">
                     <img src="./resources/images/gallery/member-photo-3.jpg">
-                    <p class="staff--name">Trudy Campbell</p>
-                    <p class="staff--role">Co-Creator</p>
+                    <div class="staff-peep">
+                        <p class="staff--name">Trudy Campbell</p>
+                        <p class="staff--role">Co-Creator</p>
+                    </div>
                 </div>
             </div>
         </section>
@@ -116,7 +121,8 @@
             <h2>FAQs</h2>
             <p>If your question isn't answered here, feel free to contact us.</p>
             <div class="accordion--item">
-                <a id="faq1" href="#faq1" class="accordion--header">
+                <a id="faq1" class="accordion--header">
+
                     <h3>What is an Escape Room?</h3>
                 </a>
                 <div id="collapsefaq1" class="collapse show">
@@ -124,7 +130,7 @@
                 </div>
             </div>
             <div class="accordion--item">
-                <a id="faq2" href="#faq2" class="accordion--header">
+                <a id="faq2" class="accordion--header">
                     <h3>Will I be locked in a room?</h3>
                 </a>
                 <div id="collapsefaq2" class="collapse">
@@ -132,7 +138,7 @@
                 </div>
             </div>
             <div class="accordion--item">
-                <a id="faq3" href="#faq3" class="accordion--header">
+                <a id="faq3" class="accordion--header">
                     <h3>How long does the whole experience take?</h3>
                 </a>
                 <div id="collapsefaq3" class="collapse">
@@ -140,7 +146,7 @@
                 </div>
             </div>
             <div class="accordion--item">
-                <a id="faq4" onclick="toggleItem()" class="accordion--header">
+                <a id="faq4" class="accordion--header">
                     <h3>Can I play more than one game?</h3>
                 </a>
                 <div id="collapsefaq4" class="collapse">
@@ -148,7 +154,7 @@
                 </div>
             </div>
             <div class="accordion--item">
-                <a id="faq5" href="#faq5" class="accordion--header">
+                <a id="faq5" class="accordion--header">
                     <h3>Will other people be in the room with us?</h3>
                 </a>
                 <div id="collapsefaq5" class="collapse">
@@ -156,7 +162,7 @@
                 </div>
             </div>
             <div class="accordion--item">
-                <a id="faq6" href="#faq6" class="accordion--header">
+                <a id="faq6" class="accordion--header">
                     <h3>Do I need to bring anything?</h3>
                 </a>
                 <div id="collapsefaq6" class="collapse">
@@ -164,7 +170,7 @@
                 </div>
             </div>
             <div class="accordion--item">
-                <a id="faq7" href="#faq7" class="accordion--header">
+                <a id="faq7" class="accordion--header">
                     <h3>Is there an age limit?</h3>
                 </a>
                 <div id="collapsefaq7" class="collapse">
@@ -174,6 +180,5 @@
         </section>
     </main>
     <script src="./resources/js/about.js"></script>
-    <script src="./resources/js/temp.js" async="false"></script>
 </body>
 </html>

@@ -106,7 +106,8 @@ footer {
     &::after {
         content: "";
         background: url('../images/gallery/room-7.jpg') no-repeat;
-        background-size:210vh 100%;
+        background-size: cover;
+        background-position: center;
         position: absolute;
         top: 0;
         left: 0;
