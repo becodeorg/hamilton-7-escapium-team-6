@@ -47,6 +47,7 @@ function checkboxBurger() {
     }
     else{
         if (header) {
+                
             }
             else {
                 addNavbar();
