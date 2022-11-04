@@ -241,10 +241,16 @@ main {
         }
       
     }
-    .leave-a-comment{
+    .leave-a-comment {
         font-size: 85%;
         width: 95%;
         margin: auto;
+        h1{
+                font-family: $headings-font;
+                color: white;
+                font-size: 180%;
+                margin-top: 2.5em;
+        }
         .grey-bar{
             width: 30px;
             height: 3.5px;
