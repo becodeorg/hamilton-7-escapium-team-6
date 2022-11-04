@@ -1,10 +1,10 @@
 async function addHeader() {
-    const resp = await fetch("../header.html");
+    const resp = await fetch("./header.html");
     const html = await resp.text();
     document.body.insertAdjacentHTML("beforebegin", html);
 }
 
-/* fetch("../../header.html")
+/* fetch("./../header.html")
     .then(response => response.text())
     .then(text => {
     const parser = new DOMParser();
