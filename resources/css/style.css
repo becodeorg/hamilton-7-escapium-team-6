@@ -2591,6 +2591,12 @@ main {
     width: 95%;
     margin: auto;
   }
+  .leave-a-comment h1 {
+    font-family: "Montserrat";
+    color: white;
+    font-size: 180%;
+    margin-top: 2.5em;
+  }
   .leave-a-comment .grey-bar {
     width: 30px;
     height: 3.5px;
@@ -3002,18 +3008,26 @@ main {
     width: 80%;
     margin: auto;
     margin-bottom: 35px;
+    gap: 10px;
   }
   .rooms .room-box {
     display: flex;
     flex-direction: column;
     width: 90%;
-    height: 400px;
+    height: 380px;
     background-size: cover;
     background-position-x: 50%;
     margin: auto;
     position: relative;
     margin-top: 35px;
     cursor: pointer;
+    filter: brightness(80%);
+    transform: scale(1);
+  }
+  .rooms .room-box:hover {
+    transition: 0.33s;
+    filter: brightness(150%);
+    transform: scale(1.1);
   }
   .rooms .room-box .box-elements {
     display: flex;
