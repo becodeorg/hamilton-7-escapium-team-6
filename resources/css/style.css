@@ -2401,6 +2401,7 @@ main {
     height: auto;
     background-color: #222222;
     margin-bottom: 3.5em;
+    box-shadow: red;
   }
   .container-blog-body img {
     width: 100%;
@@ -2548,6 +2549,12 @@ main {
     margin-right: 1em;
     margin-top: 2.5em;
   }
+  .container-comments .grey-bar {
+    width: 30px;
+    height: 3.5px;
+    background-color: rgba(128, 128, 128, 0.445);
+    margin-top: 15px;
+  }
   .container-comments .comments {
     display: flex;
     flex-direction: row;
@@ -2578,6 +2585,55 @@ main {
     font-size: 80%;
     color: antiquewhite;
     font-family: "Montserrat";
+  }
+  .leave-a-comment {
+    font-size: 85%;
+    width: 95%;
+    margin: auto;
+  }
+  .leave-a-comment .grey-bar {
+    width: 30px;
+    height: 3.5px;
+    background-color: rgba(128, 128, 128, 0.445);
+    margin-top: 15px;
+  }
+  .leave-a-comment .gigabar {
+    width: 100%;
+    height: 2.5px;
+    background-color: rgba(128, 128, 128, 0.445);
+    margin-top: 10px;
+  }
+  .leave-a-comment .name {
+    margin-top: 2.5em;
+  }
+  .leave-a-comment .your-email {
+    margin-top: 2em;
+  }
+  .leave-a-comment .type-comment {
+    margin-top: 2em;
+  }
+  .leave-a-comment .save-info {
+    margin-top: 2em;
+    margin-bottom: 2em;
+    display: flex;
+    flex-direction: row;
+  }
+  .leave-a-comment .save-info i {
+    margin-right: 1em;
+  }
+  .leave-a-comment .post-your-comment {
+    border-collapse: initial;
+    color: white;
+    background-color: #1B1B1B;
+    border-color: #717171;
+    font-family: "Hind";
+    border-radius: 30px;
+    border-width: 1px;
+    border-style: solid;
+    margin: 1px;
+    height: 45px;
+    width: 180px;
+    margin-bottom: 6em;
   }
 }
 @media screen and (min-width: 1280px) {
