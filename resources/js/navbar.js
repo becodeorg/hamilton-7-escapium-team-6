@@ -25,13 +25,42 @@ function checkboxBurger() {
     }
     }
 
-    let prevScrollpos = window.pageYOffset;
-    window.onscroll = function() {
-        let currentScrollPos = window.pageYOffset;
-        if (prevScrollpos > currentScrollPos) {
-            document.querySelector("nav").style.top = "0";
-    } else {
-        document.querySelector("navbar").style.top = "-50px";
+    async function addNavbar() {
+        const resp = await fetch("../../navbar.html")
+        const html = await resp.text();
+        document.body.insertAdjacentHTML("beforebegin", html);
     }
-    prevScrollpos = currentScrollPos;
-    } 
+    async function removeNavbar() {
+        document.querySelector('header').remove();
+    }
+    
+    let lastScrollTop;
+    window.addEventListener('scroll', function() {
+    let scrollTop = window.pageYOffset || document.documentElement.scrollTop;
+    console.log(scrollTop);
+    let header = document.querySelector('header') !== null;
+    if(scrollTop > lastScrollTop){
+        if (header && scrollTop >= 350) {
+        console.log('scroll up')
+        removeNavbar();
+        }
+        else {
+            console.log('haha ok')
+        }
+    }
+    else{
+        if (header) {
+            console.log('scroll down')
+            }
+            else if (scrollTop >= 350) {
+                addNavbar();
+                return;
+            }
+            else {
+                console.log('haha not ok')
+                addNavbar();
+                return;
+            }
+    }
+    lastScrollTop = scrollTop;
+    })
