@@ -67,12 +67,12 @@ main {
 			margin-top: 35px;
 			cursor: pointer;
 			filter: brightness(80%);
-			transform: scale(1.1);
+			transform: scale(1);
 
 			&:hover {
 				transition: 0.33s;
 				filter: brightness(150%);
-				transform: scale(1);
+				transform: scale(1.1);
 			}
 
 
